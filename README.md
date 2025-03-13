@@ -14,9 +14,13 @@ git push origin main
 
 ```sh  
 git submodule update --remote --merge
+git add power_system
+git commit -m "Updated power_system submodule reference to latest commit"
+git push origin main
 ```
 
 - To clone a project with submodules use
 
 ```sh
 git clone --recurse-submodules <submodule_url>
+```
