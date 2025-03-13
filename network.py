@@ -24,6 +24,10 @@ class Net:
         self._transformers = {}
         self._soft_open_points = {}
 
+        # Measurements
+        self._bus_measurements = {}
+        self._branch_measurements = {}
+
         # Network Matrices
         self._full_y_bus = None
         self._full_y_bus_shunt = None
@@ -31,25 +35,21 @@ class Net:
         self._y_bus_from_to = None
         self._y_bus_to_from = None
 
-        self._from_buses = []
+        self._from_buses = []  # Maybe not needed to store as an attribute
         self._to_buses = []
 
         # Load Flow Types
-        self._pq_buses = None
+        self._pq_buses = None  # Maybe not needed to store as an attribute
         self._pv_buses = None
         self._slack_buses = None
 
         # Load Flow Results
-        self._vm = None
+        self._vm = None  # Could store as bus attribute
         self._va = None
 
         # Load Flow Scheduled Powers
-        self.p_scheduled_pu = None
+        self.p_scheduled_pu = None  # Maybe not needed to store as an attribute.
         self.q_scheduled_pu = None
-
-        # Measurements
-        self._bus_measurements = {}
-        self._branch_measurements = {}
 
     def __repr__(self):
         return (f'System Properties\n'
@@ -86,6 +86,21 @@ class Net:
     def mho_to_pu(self, mho, vn_kv):
         yBase = (self.s_base_mva*1e6)/((vn_kv*1e3)**2)
         return mho/yBase
+
+    def pu_to_mw(self, pu):
+        return pu*self.s_base_mva
+
+    def pu_to_ohm(self, pu, vn_kv):
+        zBase = ((vn_kv * 1e3) ** 2) / (self.s_base_mva*1e6)
+        return pu*zBase
+
+    def pu_to_ampere(self, pu, vn_kv):
+        iBase = self.s_base_mva * 1e6 / (math.sqrt(3) * vn_kv * 12.66)
+        return pu*iBase
+
+    def pu_to_mho(self, pu, vn_kv):
+        yBase = (self.s_base_mva*1e6)/((vn_kv*1e3)**2)
+        return pu*yBase
     # endregion
 
     # region Getters and Setters
