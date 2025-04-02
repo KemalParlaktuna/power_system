@@ -4,9 +4,9 @@
 - To initialize the submodule in the project use
 
 ``` sh
-git submodule add <submodule_url>
-git add .gitmodules <submodule_name>
-git commit -m "Added <submodule_name> as a submodule"
+git submodule add https://github.com/KemalParlaktuna/power_system.git
+git add .gitmodules power_system
+git commit -m "Added power_system as a submodule"
 git push origin main
 ```
 
