@@ -34,11 +34,12 @@ def create_measurement_vector(net):
     return array(v_magnitude + p_injection + q_injection + p_flow + q_flow), csr_matrix(diagflat(1 / array(r_cov) ** 2))
 
 
-def create_jacobian_matrix(net, v):
+def create_jacobian_matrix(net, v, angle_indices, magnitude_indices):
     dsbus_dvm, dsbus_dva = calculate_dsbus_dx(net.y_bus, v)
     dsbranch_dvm, dsbranch_dva = calculate_dsbranch_dx(net.y_bus_from_to,
-                                                           net.from_buses,
-                                                           v)
+                                                       net.from_buses,
+                                                       v)
+
     v_jac_va, v_jac_vm = zeros((v.shape[0], v.shape[0])), eye(v.shape[0], v.shape[0])
     s_jac_va = vstack((dsbus_dva.real,
                        dsbus_dva.imag,
@@ -55,7 +56,7 @@ def create_jacobian_matrix(net, v):
     vm_jac = c_[v_jac_va, v_jac_vm]
     H = r_[vm_jac, s_jac]
 
-    return csr_matrix(H[:, 1:])  # todo: this should read slack buses. for now assume it is bus 0.
+    return csr_matrix(H[:, angle_indices + magnitude_indices])
 
 
 def create_hx(net, v):
@@ -82,13 +83,14 @@ def estimate(net,
              algorithm='WLS'):
 
     vm, va = flat_start(net)
-
+    angle_indices = [i for i in range(len(net.buses)) if i not in net.slack_buses]
+    magnitude_indices = list(range(len(net.buses), 2 * len(net.buses)))
     iteration = 0
     while iteration < max_iteration:
         iteration += 1
         v = vm * exp(1j * va)
         z, r_inv = create_measurement_vector(net)
-        H = create_jacobian_matrix(net, v)
+        H = create_jacobian_matrix(net, v, angle_indices, magnitude_indices)
         hx = create_hx(net, v)
         r = z - hx
         if algorithm =='WLS':
@@ -112,8 +114,8 @@ def estimate(net,
         else:
             raise NotImplementedError
 
-        va[1:] += dx[:len(net.buses)-1]  # todo: this should read slack buses. for now assume it is bus 0.
-        vm += dx[len(net.buses)-1:]  # todo: this should read slack buses. for now assume it is bus 0.
+        va[angle_indices] += dx[:len(net.buses)-1]
+        vm += dx[len(net.buses)-1:]
 
         eps = max(abs(dx))
         if eps < tolerance:
