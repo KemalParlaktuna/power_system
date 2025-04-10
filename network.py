@@ -51,6 +51,10 @@ class Net:
         self.p_scheduled_pu = None  # Maybe not needed to store as an attribute.
         self.q_scheduled_pu = None
 
+        # State Estimation Results
+        self._vm_estimated = None
+        self._va_estimated = None
+
     def __repr__(self):
         return (f'System Properties\n'
                 f'-------------------------\n'
@@ -304,4 +308,19 @@ class Net:
     def branch_measurements(self, value):
         self._branch_measurements = value
 
+    @property
+    def vm_estimated(self):
+        return self._vm_estimated
+
+    @vm_estimated.setter
+    def vm_estimated(self, value):
+        self._vm_estimated = value
+
+    @property
+    def va_estimated(self):
+        return self._va_estimated
+
+    @va_estimated.setter
+    def va_estimated(self, value):
+        self._va_estimated = value
     # endregion
