@@ -119,8 +119,10 @@ def estimate(net,
         if eps < tolerance:
             print(f'{algorithm} State Estimation Converged at Iteration {iteration}')
             net.vm_estimated = vm
+            net.va_estimated = va
             break
         if iteration == max_iteration:
             net.va_estimated = va
+            net.vm_estimated = vm
             print(f'{algorithm} State Estimation Did Not Converge')
 
