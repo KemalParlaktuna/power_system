@@ -79,7 +79,7 @@ def flat_start(net):
 def estimate(net,
              max_iteration=100,
              tolerance=1e-8,
-             algorithm='wls'):
+             algorithm='WLS'):
 
     vm, va = flat_start(net)
 
@@ -91,12 +91,12 @@ def estimate(net,
         H = create_jacobian_matrix(net, v)
         hx = create_hx(net, v)
         r = z - hx
-        if algorithm =='wls':
+        if algorithm =='WLS':
             G_m = H.T * (r_inv * H)
 
             dx = spsolve(G_m, H.T * (r_inv * r))
 
-        elif algorithm == 'lav':
+        elif algorithm == 'LAV':
             m, n = H.shape
 
             C = concatenate((zeros((1, n)), zeros((1, n)), ones((1, m)), ones((1, m))), axis=1)
@@ -109,14 +109,16 @@ def estimate(net,
             delXv = sol[n:n + n]
 
             dx = delXu - delXv
+        else:
+            raise NotImplementedError
 
         va[1:] += dx[:len(net.buses)-1]  # todo: this should read slack buses. for now assume it is bus 0.
         vm += dx[len(net.buses)-1:]  # todo: this should read slack buses. for now assume it is bus 0.
 
         eps = max(abs(dx))
         if eps < tolerance:
-            print(f'State Estimation Converged at Iteration {iteration}')
+            print(f'{algorithm} State Estimation Converged at Iteration {iteration}')
             break
         if iteration == max_iteration:
-            print(f'State Estimation Did Not Converge')
+            print(f'{algorithm} State Estimation Did Not Converge')
 

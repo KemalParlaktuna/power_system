@@ -110,6 +110,7 @@ def create_network_from_json(net, filename) -> None:
     create_shunt_from_dict(net, data)
     create_battery_from_dict(net, data)
     create_line_from_dict(net, data)
+    create_transformer_from_dict(net, data)
     create_sop_from_dict(net, data)
 
 
