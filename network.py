@@ -14,7 +14,7 @@ class Net:
         self._buses = {}
 
         # Shunt Elements
-        self._generations = {}
+        self._generators = {}
         self._loads = {}
         self._shunts = {}
         self._batteries = {}
@@ -66,7 +66,7 @@ class Net:
                 f'-------------------------\n'
                 f'- Number of Buses: {len(self.buses)}\n'
                 f'- Number of Loads: {len(self.loads)}\n'
-                f'- Number of Generations: {len(self.generations)}\n'
+                f'- Number of Generators: {len(self.generators)}\n'
                 f'- Number of Shunts: {len(self.shunts)}\n'
                 f'-------------------------\n'
                 f'Branch Elements\n'
@@ -117,12 +117,12 @@ class Net:
         self._buses = value
 
     @property
-    def generations(self):
-        return self._generations
+    def generators(self):
+        return self._generators
 
-    @generations.setter
-    def generations(self, value):
-        self._generations = value
+    @generators.setter
+    def generators(self, value):
+        self._generators = value
 
     @property
     def loads(self):
