@@ -34,15 +34,16 @@ def create_y_bus(net):
     for transformer in net.transformers.values():
         i = transformer.from_bus.bus_idx
         j = transformer.to_bus.bus_idx
-        r_pu = net.ohm_to_pu(transformer.r_pu*transformer.z_base, transformer.to_bus.voltage_level_kv)
-        x_pu = net.ohm_to_pu(transformer.x_pu*transformer.z_base, transformer.to_bus.voltage_level_kv)
+        z_base = transformer.v_rated_low_kv**2/transformer.rated_s_mva
+        r_pu = net.ohm_to_pu(transformer.r_pu*z_base, transformer.v_rated_low_kv)
+        x_pu = net.ohm_to_pu(transformer.x_pu*z_base, transformer.v_rated_low_kv)
 
-        gm_pu = net.mho_to_pu(transformer.gm_pu/transformer.z_base, transformer.to_bus.voltage_level_kv)
-        bm_pu = net.mho_to_pu(transformer.bm_pu/transformer.z_base, transformer.to_bus.voltage_level_kv)
+        gm_pu = net.mho_to_pu(transformer.gm_pu/z_base, transformer.to_bus.voltage_level_kv)
+        bm_pu = net.mho_to_pu(transformer.bm_pu/z_base, transformer.to_bus.voltage_level_kv)
         y_shunt = complex(gm_pu, bm_pu)
         y_series = 1/complex(r_pu, x_pu)
-        tap = transformer.tap
-        phase_shift = transformer.phase_shift
+        tap = 1  # TODO: Should be read from case file. Otherwise 1
+        phase_shift = 0  # TODO: Should be read from case file. Otherwise 0
 
         if tap == 0 or tap == None:
             tap = 1
