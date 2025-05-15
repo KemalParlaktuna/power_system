@@ -80,8 +80,8 @@ class Shunt(Shunt_Element):
 @dataclass(kw_only=True)
 class Branch(ABC):
     idx: int  # Branch element ID
-    from_bus: Bus  # Bus class instant of the from bus
-    to_bus: Bus  # Bus class instant of the to buse
+    from_bus: Bus  # Bus class instant of the "from" bus
+    to_bus: Bus  # Bus class instant of the "to" bus
     closed: bool = True  # True means switches are closed and the branch is active
 
 
