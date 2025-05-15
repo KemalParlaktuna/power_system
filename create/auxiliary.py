@@ -9,9 +9,6 @@ def create_bus_from_dict(net, data) -> None:
         create_bus(net,
                    bus_idx=bus['bus_idx'],
                    voltage_level_kv=bus['voltage_level_kv'],
-                   load_flow_type=bus['load_flow_type'],
-                   set_voltage_magnitude_kv=bus['set_voltage_magnitude_kv'],  # todo: These should be moved to the database
-                   set_voltage_angle_degree=bus['set_voltage_angle_degree'],
                    bus_name=bus['bus_name'],
                    coordinates=bus['coordinates'])
 
@@ -21,19 +18,20 @@ def create_load_from_dict(net, data) -> None:
         create_load(net,
                     load_idx=load['load_idx'],
                     bus_idx=load['bus_idx'],
-                    p_mw=load['p_mw'],
-                    q_mvar=load['q_mvar'],
+                    s_rated_mva=load['s_rated_mva'],
                     load_name=load['load_name'])
 
 
 def create_generation_from_dict(net, data: dict) -> None:
-    for generation in data['generation_data'].values():
-        create_generation(net,
-                          generation_idx=generation['generation_idx'],
-                          bus_idx=generation['bus_idx'],
-                          p_mw=generation['p_mw'],
-                          voltage_magnitude_kv=generation['voltage_magnitude_kv'],
-                          generation_name=generation['generation_name'])
+    for generation in data['generator_data'].values():
+        create_generator(net,
+                         generation_idx=generation['generator_idx'],
+                         bus_idx=generation['bus_idx'],
+                         min_p_mw=generation['min_p_mw'],
+                         max_p_mw=generation['max_p_mw'],
+                         min_q_mvar=generation['min_q_mvar'],
+                         max_q_mvar=generation['max_q_mvar'],
+                         generator_name=generation['generator_name'])
 
 
 def create_shunt_from_dict(net, data: dict) -> None:
@@ -50,9 +48,8 @@ def create_battery_from_dict(net, data: dict) -> None:
         create_battery(net,
                        battery_idx=battery['battery_idx'],
                        bus_idx=battery['bus_idx'],
-                       p_mw=battery['p_mw'],
-                       p_charge_max_mw=battery['p_charge_max_mw'],
-                       p_discharge_max_mw=battery['p_discharge_max_mw'],
+                       p_charge_mw=battery['p_charge_mw'],
+                       p_discharge_mw=battery['p_discharge_mw'],
                        soc=battery['soc'],
                        capacity_mwh=battery['capacity_mwh'],
                        battery_name=battery['battery_name'])
@@ -76,14 +73,14 @@ def create_transformer_from_dict(net, data: dict) -> None:
                            transformer_idx=transformer['transformer_idx'],
                            from_bus_idx=transformer['from_bus_idx'],
                            to_bus_idx=transformer['to_bus_idx'],
+                           v_rated_high_kv=transformer['v_rated_high_kv'],
+                           v_rated_low_kv=transformer['v_rated_low_kv'],
+                           rated_s_mva=transformer['rated_s_mva'],
                            r_pu=transformer['r_pu'],
                            x_pu=transformer['x_pu'],
-                           z_base=transformer['z_base'],
-                           tap=transformer['tap'],
                            gm_pu=transformer['gm_pu'],
-                           bm_pu=transformer['bm_pu'],
-                           phase_shift=transformer['phase_shift'],
-                           closed=transformer['closed'])
+                           bm_pu=transformer['bm_pu']
+                           )
 
 
 def create_sop_from_dict(net, data: dict) -> None:
