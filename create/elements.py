@@ -39,21 +39,21 @@ class Load(Shunt_Element):
 
 @dataclass
 class Generator(Shunt_Element):
-    p_min_mw: float  # Generator minimum P limit
-    p_max_mw: float  # Generator maximum P limit
-    q_min_mvar: float  # Generator minimum Q limit
-    q_max_mvar: float  # Generator maximum Q limit
+    min_p_mw: float  # Generator minimum P limit
+    max_p_mw: float  # Generator maximum P limit
+    min_q_mvar: float  # Generator minimum Q limit
+    max_q_mvar: float  # Generator maximum Q limit
     p_mw: float = field(init=False, default=0.0)  # Simulation instant P
     p_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
 
     def __post_init__(self):
         if self.name == 'NA':
-            self.name = f'Generation {self.idx} '
+            self.name = f'Generator {self.idx} '
 
 
 @dataclass
 class Battery(Shunt_Element):
-    p_mw: float  # Simulation instan P
+    p_mw: float = field(init=False, default=0.0)  # Simulation instant P
     p_charge_mw: float  # Max Charge Value (Positive)
     p_discharge_mw: float  # Max Discharge Value (Negative)
     soc: float  # State of charge (0-1)
@@ -101,8 +101,6 @@ class Transformer(Branch):  # from_bus is HV and to_bus is LV
     x_pu: float = 0  # leakage losses
     gm_pu: float = 0  # Core loss resistance
     bm_pu: float = 0  # Magnetzing reactance loss
-    tap: bool = False  # If true tap exists
-    phase_shift: bool = False  # If true phase shift exists
 
 
 @dataclass
