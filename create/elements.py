@@ -5,15 +5,12 @@ from dataclasses import dataclass, field
 # region Bus Classes
 @dataclass(kw_only=True)
 class Bus(ABC):
-    bus_idx: int
-    voltage_level_kv: float
-    load_flow_type: str
-    bus_name: str = 'NA'
-    set_voltage_magnitude_kv: float
-    set_voltage_angle_degree: float
-    voltage_magnitude_pu: float = field(init=False, default=1)
-    voltage_angle_degree: float = field(init=False, default=0)
-    coordinates: tuple = (0, 0)
+    bus_idx: int  # Bus ID
+    voltage_level_kv: float  # Line-to-line voltage level
+    bus_name: str = 'NA'  # Bus name
+    coordinates: tuple = (0, 0)  # geographical coordinates (latitude, longitude)
+    voltage_magnitude_pu: float = field(init=False, default=1)  # Simulation instant voltage magnitude
+    voltage_angle_rad: float = field(init=False, default=0)  # Simulation instant voltage angle
 
     def __post_init__(self):
         if self.bus_name == 'NA':
@@ -24,15 +21,16 @@ class Bus(ABC):
 # region Shunt Classes
 @dataclass(kw_only=True)
 class Shunt_Element(ABC):  # TODO: If two of the same type of shunt element is connected to the same bus give them an internal ID (Bus 1 Load 1, Bus 1 Load 2 etc.)
-    idx: int
-    bus: Bus
-    name: str = 'NA'
+    idx: int   # Equipment ID
+    bus: Bus  # Bus clss instant that the shunt equipment is connected
+    name: str = 'NA'  # Name of the equipment
 
 
 @dataclass
 class Load(Shunt_Element):
-    p_mw: float
-    q_mvar: float
+    s_rated_mva: float  # Rated S of the load
+    p_mw: float = field(init=False, default=0.0)  # Simulation instant P
+    p_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
 
     def __post_init__(self):
         if self.name == 'NA':
@@ -40,9 +38,13 @@ class Load(Shunt_Element):
 
 
 @dataclass
-class Generation(Shunt_Element):
-    p_mw: float
-    voltage_magnitude_kv: float
+class Generator(Shunt_Element):
+    p_min_mw: float  # Generator minimum P limit
+    p_max_mw: float  # Generator maximum P limit
+    q_min_mvar: float  # Generator minimum Q limit
+    q_max_mvar: float  # Generator maximum Q limit
+    p_mw: float = field(init=False, default=0.0)  # Simulation instant P
+    p_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
 
     def __post_init__(self):
         if self.name == 'NA':
@@ -51,11 +53,11 @@ class Generation(Shunt_Element):
 
 @dataclass
 class Battery(Shunt_Element):
-    p_mw: float
-    p_charge_max_mw: float  # Max Charge Value (Positive)
-    p_discharge_max_mw: float  # Max Discharge Value (Negative)
-    soc: float
-    capacity_mwh: float
+    p_mw: float  # Simulation instan P
+    p_charge_mw: float  # Max Charge Value (Positive)
+    p_discharge_mw: float  # Max Discharge Value (Negative)
+    soc: float  # State of charge (0-1)
+    capacity_mwh: float  # Energy capacity
 
     def __post_init__(self):
         if self.name == 'NA':
@@ -64,8 +66,8 @@ class Battery(Shunt_Element):
 
 @dataclass
 class Shunt(Shunt_Element):
-    p_mw: float
-    q_mvar: float
+    p_mw: float  # Shunt element P
+    q_mvar: float  # Shunt element Q
 
     def __post_init__(self):
         if self.name == 'NA':
@@ -77,37 +79,40 @@ class Shunt(Shunt_Element):
 # region Branch Classes
 @dataclass(kw_only=True)
 class Branch(ABC):
-    idx: int
-    from_bus: Bus
-    to_bus: Bus
+    idx: int  # Branch element ID
+    from_bus: Bus  # Bus class instant of the from bus
+    to_bus: Bus  # Bus class instant of the to buse
     closed: bool = True  # True means switches are closed and the branch is active
 
 
 @dataclass
 class Line(Branch):
-    r_ohm: float = 0
-    x_ohm: float = 0
-    b_total_mho: float = 0
+    r_ohm: float = 0  # Series resistance
+    x_ohm: float = 0   # Series reactance
+    b_total_mho: float = 0  # Shunt admittance of pi model
 
 
 @dataclass
 class Transformer(Branch):  # from_bus is HV and to_bus is LV
-    z_base: float
-    r_pu: float = 0
-    x_pu: float = 0
-    gm_pu: float = 0
-    bm_pu: float = 0
-    tap: float = 1
-    phase_shift: float = 0
+    v_rated_high_kv: float  # high voltage side line-to-line rated voltage
+    v_rated_low_kv: float  # low voltage side line-to-line rated voltage
+    rated_s_mva: float  # rated power of the transformer
+    r_pu: float = 0  # Copper losses
+    x_pu: float = 0  # leakage losses
+    gm_pu: float = 0  # Core loss resistance
+    bm_pu: float = 0  # Magnetzing reactance loss
+    tap: bool = False  # If true tap exists
+    phase_shift: bool = False  # If true phase shift exists
 
 
 @dataclass
 class SOP(Branch):
-    rated_s: float
-    p_mw: float = 0
-    q_mvar_from_to: float = 0
-    q_mvar_to_from: float = 0
-    efficiency: float = 100
+    rated_s: float  # rated power of SOP
+    pf_mw: float = 0  # Simulation instant P to the "from" side
+    pt_mw: float = 0  # Simulation instant P to the "to" side
+    qf_mvar: float = 0  # Simulation instant Q to the "from" side
+    qt_mvar: float = 0  # Simulation instant Q to the "to" side
+    efficiency: float = 1  # Efficiency that binds "pf_mw" and "pt_mw" together (0-1)
 # endregion
 
 
