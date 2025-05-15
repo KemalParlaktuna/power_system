@@ -4,9 +4,6 @@ from .elements import *
 def create_bus(net,
                bus_idx: int,
                voltage_level_kv: float,
-               load_flow_type: str,
-               set_voltage_magnitude_kv: float,
-               set_voltage_angle_degree: float,
                bus_name: str = 'NA',
                coordinates: tuple[float, float] = (0, 0)) -> None:
 
@@ -37,7 +34,7 @@ def create_generator(net,
                      max_p_mw: float,
                      min_q_mvar: float,
                      max_q_mvar: float,
-                     generation_name: str = 'NA') -> None:
+                     generator_name: str = 'NA') -> None:
 
     net.generators[generation_idx] = Generator(idx=generation_idx,
                                                bus=net.buses[bus_idx],
@@ -45,7 +42,7 @@ def create_generator(net,
                                                max_p_mw=max_p_mw,
                                                min_q_mvar=min_q_mvar,
                                                max_q_mvar=max_q_mvar,
-                                               name=generation_name)
+                                               name=generator_name)
 
 
 def create_shunt(net,
