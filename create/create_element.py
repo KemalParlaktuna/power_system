@@ -106,6 +106,8 @@ def create_transformer(net,
                        x_pu: float,
                        gm_pu: float = 0,
                        bm_pu: float = 0,
+                       tap: float = 1,
+                       phase_shift: float = 0,
                        closed: bool = True) -> None:
 
     net.transformers[transformer_idx] = Transformer(idx=transformer_idx,
@@ -118,7 +120,9 @@ def create_transformer(net,
                                                     r_pu=r_pu,
                                                     x_pu=x_pu,
                                                     gm_pu=gm_pu,
-                                                    bm_pu=bm_pu
+                                                    bm_pu=bm_pu,
+                                                    tap=tap,
+                                                    phase_shift=phase_shift,
                                                     )
 
 

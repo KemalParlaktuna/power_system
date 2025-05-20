@@ -100,7 +100,9 @@ class Transformer(Branch):  # from_bus is HV and to_bus is LV
     r_pu: float = 0  # Copper losses
     x_pu: float = 0  # leakage losses
     gm_pu: float = 0  # Core loss resistance
-    bm_pu: float = 0  # Magnetzing reactance loss
+    bm_pu: float = 0  # Magnetizing reactance loss
+    tap: float = 1  # Tap changing transformer tap in pu
+    phase_shift: float = 0  # Phase shifting transformer phase shift in degrees
 
 
 @dataclass

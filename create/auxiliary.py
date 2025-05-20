@@ -79,7 +79,9 @@ def create_transformer_from_dict(net, data: dict) -> None:
                            r_pu=transformer['r_pu'],
                            x_pu=transformer['x_pu'],
                            gm_pu=transformer['gm_pu'],
-                           bm_pu=transformer['bm_pu']
+                           bm_pu=transformer['bm_pu'],
+                           tap=transformer['tap'],
+                           phase_shift=transformer['phase_shift']
                            )
 
 
