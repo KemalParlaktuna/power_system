@@ -42,8 +42,8 @@ def create_y_bus(net):
         bm_pu = net.mho_to_pu(transformer.bm_pu/z_base, transformer.to_bus.voltage_level_kv)
         y_shunt = complex(gm_pu, bm_pu)
         y_series = 1/complex(r_pu, x_pu)
-        tap = 1  # TODO: Should be read from case file. Otherwise 1
-        phase_shift = 0  # TODO: Should be read from case file. Otherwise 0
+        tap = transformer.tap
+        phase_shift = transformer.phase_shift
 
         if tap == 0 or tap == None:
             tap = 1
