@@ -2,38 +2,45 @@ from numpy import ones, zeros, longdouble, deg2rad, exp, conj, concatenate
 from scipy.sparse import vstack, hstack, csr_matrix as sparse
 from scipy.sparse.linalg import spsolve
 from .ds_dx import calculate_dsbus_dx
+import json
 
 
-def flat_start(net):
+def flat_start(net, load_flow_data):
     vm = ones(len(net.buses))
     va = zeros(len(net.buses))
-    for bus in net.buses.values():
-        vm[bus.bus_idx] = bus.set_voltage_magnitude_kv/bus.voltage_level_kv
-        va[bus.bus_idx] = deg2rad(bus.set_voltage_angle_degree)  # TODO: Subsystem angles should be set to the slack bus angle of the subsystem.
+    for generation in load_flow_data['generation'].values():
+        vm[generation['bus_idx']] = generation['vm_pu']
+    for bus_idx, slack_bus in load_flow_data['slack_bus'].items():
+        vm[int(bus_idx)] = slack_bus['vm_pu']
+        va[int(bus_idx)] = deg2rad(slack_bus['va_degree'])
     return vm, va
 
 
-def get_bus_load_flow_types(net):
-    net.pq_buses = set()
-    net.pv_buses = set()
-    net.slack_buses = set()
-    for bus in net.buses.values():
-        if bus.load_flow_type == 'PQ':
-            net.pq_buses.add(bus.bus_idx)
-        elif bus.load_flow_type == 'PV':
-            net.pv_buses.add(bus.bus_idx)
+def get_bus_load_flow_types(load_flow_data):
+    pq_buses = set()
+    pv_buses = set()
+    slack_buses = set()
+    for bus, bus_type in load_flow_data['load_flow_type'].items():
+        if bus_type == 'PQ':
+            pq_buses.add(int(bus))
+        elif bus_type == 'PV':
+            pv_buses.add(int(bus))
         else:
-            net.slack_buses.add(bus.bus_idx)
+            slack_buses.add(int(bus))
+    return pq_buses, pv_buses, slack_buses
 
 
-def set_scheduled_powers(net):
+def set_scheduled_powers(net, load_flow_data):
     net.p_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
     net.q_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
-    for generation in net.generations.values():
-        net.p_scheduled_pu[generation.bus.bus_idx] += net.mw_to_pu(generation.p_mw)
-    for load in net.loads.values():
-        net.p_scheduled_pu[load.bus.bus_idx] -= net.mw_to_pu(load.p_mw)
-        net.q_scheduled_pu[load.bus.bus_idx] -= net.mw_to_pu(load.q_mvar)
+    for generation in load_flow_data['generation'].values():
+        net.p_scheduled_pu[generation['bus_idx']] += net.mw_to_pu(generation['p_mw'])
+    for load in load_flow_data['load'].values():
+        net.p_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['p_mw'])
+        net.q_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['q_mvar'])
+    for static_generation in load_flow_data['static_generation'].values():
+        net.p_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['p_mw'])
+        net.q_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['q_mvar'])
 
 
 def calculate_injection_powers(net, v):
@@ -64,17 +71,20 @@ def load_flow_step(net, v, pvpq_list, pq_list):
 
 
 def load_flow(net,
+              load_flow_case,
               max_iteration: int = 100,
               tolerance: float = 1e-8):
 
-    vm, va = flat_start(net)
-    get_bus_load_flow_types(net)
-
+    f = open(load_flow_case, 'r')
+    load_flow_data = json.load(f)
+    del f
+    net.pq_buses, net.pv_buses, net.slack_buses = get_bus_load_flow_types(load_flow_data)
+    vm, va = flat_start(net, load_flow_data)
     pvpq_list = sorted(list(net.pq_buses) + list(net.pv_buses))
     pq_list = sorted(list(net.pq_buses))
 
     net.y_bus = net.full_y_bus.copy()  # TODO: This should be updated from a database of switch data
-    set_scheduled_powers(net)
+    set_scheduled_powers(net, load_flow_data)
 
     iteration = 0
 
