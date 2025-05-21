@@ -4,10 +4,12 @@ import plotly.io as pio
 pio.renderers.default = "browser"
 
 
-def draw_network(net):
+def draw_network(net, color=False):
     edge_trace, edge_labels_trace = create_edge_trace(net)
-
-    node_trace = create_node_trace(net)
+    if color == True:
+        node_trace = create_node_trace_colored(net)
+    else:
+        node_trace = create_node_trace(net)
 
     network_name = net.network_name
     s_base_mva = net.s_base_mva
@@ -155,6 +157,49 @@ def create_node_trace(net, color_rule=None):
             color=node_color,
             size=12,
             line_width=2))
+
+    return node_trace
+
+
+def create_node_trace_colored(net):
+    node_x = []
+    node_y = []
+    node_color = []
+    node_symbol = ['circle']*len(net.buses)
+    node_text = []
+
+    for bus in net.buses.values():
+        # Position
+        x, y = bus.coordinates
+        node_x.append(x)
+        node_y.append(y)
+
+        # Hover text
+        text = f"Bus: {bus.bus_name}<br>Voltage: {bus.voltage_level_kv} kV"
+        node_text.append(text)
+
+        # Color by energized status
+        if bus.energized:
+            node_color.append('green')
+        else:
+            node_color.append('lightgray')
+
+    for generator in net.generators.values():
+        node_symbol[generator.bus.bus_idx] = 'star'
+
+    node_trace = go.Scatter(
+        x=node_x,
+        y=node_y,
+        mode='markers',
+        marker=dict(
+            size=12,
+            color=node_color,
+            symbol=node_symbol,
+            line=dict(width=1, color='black')
+        ),
+        hovertext=node_text,
+        hoverinfo='text'
+    )
 
     return node_trace
 
