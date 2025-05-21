@@ -166,7 +166,7 @@ def create_node_trace_colored(net):
     node_y = []
     node_color = []
     node_symbol = ['circle']*len(net.buses)
-    node_text = []
+    node_labels = []
 
     for bus in net.buses.values():
         # Position
@@ -175,8 +175,9 @@ def create_node_trace_colored(net):
         node_y.append(y)
 
         # Hover text
-        text = f"Bus: {bus.bus_name}<br>Voltage: {bus.voltage_level_kv} kV"
-        node_text.append(text)
+        node_labels.append(f'Bus ID: {bus.bus_idx} <br>'
+                           f'{bus.bus_name} <br>'
+                           f'Voltage Level: {bus.voltage_level_kv} kV <br>')
 
         # Color by energized status
         if bus.energized:
@@ -197,7 +198,7 @@ def create_node_trace_colored(net):
             symbol=node_symbol,
             line=dict(width=1, color='black')
         ),
-        hovertext=node_text,
+        hovertext=node_labels,
         hoverinfo='text'
     )
 
