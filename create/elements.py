@@ -31,7 +31,7 @@ class Shunt_Element(ABC):  # TODO: If two of the same type of shunt element is c
 class Load(Shunt_Element):
     s_rated_mva: float  # Rated S of the load
     p_mw: float = field(init=False, default=0.0)  # Simulation instant P
-    p_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
+    q_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
 
     def __post_init__(self):
         if self.name == 'NA':
@@ -45,7 +45,7 @@ class Generator(Shunt_Element):
     min_q_mvar: float  # Generator minimum Q limit
     max_q_mvar: float  # Generator maximum Q limit
     p_mw: float = field(init=False, default=0.0)  # Simulation instant P
-    p_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
+    q_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
 
     def __post_init__(self):
         if self.name == 'NA':
