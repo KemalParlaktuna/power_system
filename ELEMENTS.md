@@ -84,21 +84,6 @@ direction TB
     Branch <|-- SOP
 
 ```
-ABC
-├── Bus
-├── Shunt_Element
-│   ├── Load
-│   ├── Generation
-│   ├── Battery
-│   └── Shunt
-├── Branch
-│   ├── Line
-│   ├── Transformer
-│   └── SOP
-└── Measurement
-    ├── Bus_Measurement
-    └── Branch_Measurement
-```
 
 ### Abstract Base Classes
 
