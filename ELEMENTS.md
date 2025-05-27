@@ -14,6 +14,8 @@ direction TB
     }
 ```
 ```mermaid
+classDiagram
+direction TB
     class Branch {
 	    +int idx
 	    +Bus from_bus
@@ -48,6 +50,8 @@ direction TB
     Branch <|-- SOP
 ```
 ```
+classDiagram
+direction TB
     class Shunt_Element{
         +int idx
         +Bus bus
