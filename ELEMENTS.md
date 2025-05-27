@@ -1,13 +1,6 @@
 ## Backend
 ### Class Hierarchy
 ```mermaid
----
-config:
-  class:
-    hideEmptyMembersBox: true
-  look: neo
-  layout: elk
----
 classDiagram
 direction TB
     class Bus {
@@ -19,6 +12,8 @@ direction TB
 	    +float voltage_magnitude_pu
 	    +float voltage_angle_rad
     }
+```
+```mermaid
     class Branch {
 	    +int idx
 	    +Bus from_bus
@@ -48,6 +43,11 @@ direction TB
 	    +float qf_mvar
 	    +float qt_mvar
     }
+    Branch <|-- Line
+    Branch <|-- Transformer
+    Branch <|-- SOP
+```
+```
     class Shunt_Element{
         +int idx
         +Bus bus
@@ -81,10 +81,6 @@ direction TB
     Shunt_Element <|-- Generator
     Shunt_Element <|-- Battery
     Shunt_Element <|-- Shunt
-    Branch <|-- Line
-    Branch <|-- Transformer
-    Branch <|-- SOP
-
 ```
 
 ### Abstract Base Classes
