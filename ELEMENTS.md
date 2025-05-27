@@ -5,6 +5,8 @@
 config:
   class:
     hideEmptyMembersBox: true
+  look: neo
+  layout: elk
 ---
 classDiagram
 direction TB
