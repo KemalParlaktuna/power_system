@@ -49,7 +49,7 @@ direction TB
     Branch <|-- Transformer
     Branch <|-- SOP
 ```
-```
+```mermaid
 classDiagram
 direction TB
     class Shunt_Element{
