@@ -1,6 +1,15 @@
 ## Backend
 ### Class Hierarchy
+```mermaid
+classDiagram
+        Branch <|-- Line
+        Branch <|-- Transformer
+        Branch : +int idx
+        Branch : +Bus from_bus
+        Branch : +Bus to_bus
+        Branch : +String name
 
+```
 ```
 ABC
 ├── Bus
