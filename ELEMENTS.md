@@ -1,15 +1,88 @@
 ## Backend
 ### Class Hierarchy
 ```mermaid
+---
+config:
+  class:
+    hideEmptyMembersBox: true
+---
 classDiagram
-        Branch <|-- Line
-        Branch <|-- Transformer
-        Branch : +int idx
-        Branch : +Bus from_bus
-        Branch : +Bus to_bus
-        Branch : +String name
+direction TB
+    class Bus {
+	    +int bus_idx
+	    +float voltage_level_kv
+	    +str bus_name
+	    +tuple coordinates
+	    +bool energized
+	    +float voltage_magnitude_pu
+	    +float voltage_angle_rad
+    }
+    class Branch {
+	    +int idx
+	    +Bus from_bus
+	    +Bus to_bus
+	    +bool closed
+    }
+    class Line {
+	    +float r_ohm
+	    +float x_ohm
+	    +float b_total_mho
+    }
+    class Transformer {
+	    +float v_rated_high_kv
+	    +float v_rated_low_kv
+	    +float rated_s_mva
+	    +float r_pu
+	    +float x_pu
+	    +float gm_pu
+	    +float bm_pu
+	    +float tap
+	    +float phase_shift
+    }
+    class SOP {
+	    +float rated_s
+	    +float pf_mw
+	    +float pt_mw
+	    +float qf_mvar
+	    +float qt_mvar
+    }
+    class Shunt_Element{
+        +int idx
+        +Bus bus
+        +str name
+    }
+    class Load{
+        +float s_rated_mva
+        +float p_mw
+        +float q_mvar
+    }
+    class Generator{
+        +float min_p_mw
+        +float max_p_mw
+        +float min_q_mvar
+        +float max_q_mvar
+        +float p_mw
+        +float q_mvar
+    }
+    class Battery{
+        +float p_mw
+        +float p_charge_mw
+        +float p_discharge_mw
+        +float soc
+        +float capacity_mwh
+    }
+    class Shunt{
+        +float p_mw
+        +float q_mvar
+    }
+    Shunt_Element <|-- Load
+    Shunt_Element <|-- Generator
+    Shunt_Element <|-- Battery
+    Shunt_Element <|-- Shunt
+    Branch <|-- Line
+    Branch <|-- Transformer
+    Branch <|-- SOP
 
-```
 ```
 ABC
 ├── Bus
