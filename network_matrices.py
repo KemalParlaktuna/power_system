@@ -34,12 +34,12 @@ def create_y_bus(net):
     for transformer in net.transformers.values():
         i = transformer.from_bus.bus_idx
         j = transformer.to_bus.bus_idx
-        z_base = transformer.v_rated_low_kv**2/transformer.rated_s_mva
-        r_pu = net.ohm_to_pu(transformer.r_pu*z_base, transformer.v_rated_low_kv)
-        x_pu = net.ohm_to_pu(transformer.x_pu*z_base, transformer.v_rated_low_kv)
+        z_base_transformer = transformer.v_rated_low_kv**2/transformer.rated_s_mva
+        r_pu = net.ohm_to_pu(transformer.r_pu*z_base_transformer, transformer.v_rated_low_kv)
+        x_pu = net.ohm_to_pu(transformer.x_pu*z_base_transformer, transformer.v_rated_low_kv)
 
-        gm_pu = net.mho_to_pu(transformer.gm_pu/z_base, transformer.to_bus.voltage_level_kv)
-        bm_pu = net.mho_to_pu(transformer.bm_pu/z_base, transformer.to_bus.voltage_level_kv)
+        gm_pu = net.mho_to_pu(transformer.gm_pu/z_base_transformer, transformer.to_bus.voltage_level_kv)
+        bm_pu = net.mho_to_pu(transformer.bm_pu/z_base_transformer, transformer.to_bus.voltage_level_kv)
         y_shunt = complex(gm_pu, bm_pu)
         y_series = 1/complex(r_pu, x_pu)
         tap = transformer.tap
