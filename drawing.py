@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 import plotly.io as pio
-
+import json
 pio.renderers.default = "browser"
 
 
@@ -109,14 +109,20 @@ def create_edge_trace(net):
     return edge_trace, edge_labels_trace
 
 
+def get_coordinates_from_geojson(geojson_str):
+    """Extracts (x, y) from a GeoJSON Point string."""
+    geojson_obj = json.loads(geojson_str)
+    return geojson_obj['coordinates']
+
+
 def create_edge_info(edge_dict):
     edge_x = []
     edge_y = []
     label_x = []
     label_y = []
     for edge in edge_dict.values():
-        x0, y0 = edge.from_bus.coordinates
-        x1, y1 = edge.to_bus.coordinates
+        x0, y0 = get_coordinates_from_geojson(edge.from_bus.coordinates)
+        x1, y1 = get_coordinates_from_geojson(edge.to_bus.coordinates)
         label_x.append((x0 + x1) / 2)
         label_y.append((y0 + y1) / 2)
         edge_x.append(x0)
@@ -135,7 +141,7 @@ def create_node_trace(net, color_rule=None):
     node_labels = []
     node_color = []
     for bus in net.buses.values():
-        x, y = bus.coordinates
+        x, y = get_coordinates_from_geojson(bus.coordinates)
         node_x.append(x)
         node_y.append(y)
         node_labels.append(f'Bus ID: {bus.bus_idx} <br>'
@@ -170,7 +176,7 @@ def create_node_trace_colored(net):
 
     for bus in net.buses.values():
         # Position
-        x, y = bus.coordinates
+        x, y = get_coordinates_from_geojson(bus.coordinates)
         node_x.append(x)
         node_y.append(y)
 
