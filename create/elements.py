@@ -7,8 +7,8 @@ from dataclasses import dataclass, field
 class Bus(ABC):
     bus_idx: int  # Bus ID
     voltage_level_kv: float  # Line-to-line voltage level
+    coordinates: str  # Bus coordinates in geojson string format
     bus_name: str = 'NA'  # Bus name
-    coordinates: tuple = (0, 0)  # geographical coordinates (latitude, longitude)
     energized: bool = True
     voltage_magnitude_pu: float = field(init=False, default=1)  # Simulation instant voltage magnitude
     voltage_angle_rad: float = field(init=False, default=0)  # Simulation instant voltage angle
