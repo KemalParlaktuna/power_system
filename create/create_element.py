@@ -5,7 +5,7 @@ def create_bus(net,
                bus_idx: int,
                voltage_level_kv: float,
                bus_name: str = 'NA',
-               coordinates: tuple[float, float] = (0, 0)) -> None:
+               coordinates: str = '{"coordinates": [0, 0], "type": "Point"}') -> None:
 
     # Buses are nodes that all other elements connect to.
     net.buses[bus_idx] = Bus(bus_idx=bus_idx,
