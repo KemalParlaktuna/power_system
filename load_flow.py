@@ -16,31 +16,32 @@ def flat_start(net, load_flow_data):
     return vm, va
 
 
-def get_bus_load_flow_types(load_flow_data):
-    pq_buses = set()
-    pv_buses = set()
-    slack_buses = set()
+def get_bus_load_flow_types(net, load_flow_data) -> None:
+    net.pq_buses = set()
+    net.pv_buses = set()
+    net.slack_buses = set()
     for bus, bus_type in load_flow_data['load_flow_type'].items():
         if bus_type == 'PQ':
-            pq_buses.add(int(bus))
+            net.pq_buses.add(int(bus))
         elif bus_type == 'PV':
-            pv_buses.add(int(bus))
+            net.pv_buses.add(int(bus))
         else:
-            slack_buses.add(int(bus))
-    return pq_buses, pv_buses, slack_buses
+            net.slack_buses.add(int(bus))
 
 
 def set_scheduled_powers(net, load_flow_data):
-    net.p_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
-    net.q_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
+    p_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
+    q_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
     for generation in load_flow_data['generation'].values():
-        net.p_scheduled_pu[generation['bus_idx']] += net.mw_to_pu(generation['p_mw'])
+        p_scheduled_pu[generation['bus_idx']] += net.mw_to_pu(generation['p_mw'])
     for load in load_flow_data['load'].values():
-        net.p_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['p_mw'])
-        net.q_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['q_mvar'])
+        p_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['p_mw'])
+        q_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['q_mvar'])
     for static_generation in load_flow_data['static_generation'].values():
-        net.p_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['p_mw'])
-        net.q_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['q_mvar'])
+        p_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['p_mw'])
+        q_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['q_mvar'])
+
+    return p_scheduled_pu, q_scheduled_pu
 
 
 def calculate_injection_powers(net, v):
@@ -59,39 +60,54 @@ def calculate_jacobian_matrix(net, v, pvpq_list, pq_list):
     return vstack([hstack([j11, j12]), hstack([J21, J22])])
 
 
-def load_flow_step(net, v, pvpq_list, pq_list):
+def load_flow_step(net, v, pvpq_list, pq_list, p_scheduled_pu, q_scheduled_pu):
     S = calculate_injection_powers(net, v)
 
     J  = calculate_jacobian_matrix(net, v, pvpq_list, pq_list)
-    delta_p = S.real[pvpq_list] - net.p_scheduled_pu[pvpq_list]
-    delta_q = S.imag[pq_list] - net.q_scheduled_pu[pq_list]
+    delta_p = S.real[pvpq_list] - p_scheduled_pu[pvpq_list]
+    delta_q = S.imag[pq_list] - q_scheduled_pu[pq_list]
 
     F = concatenate([delta_p, delta_q])
     return -spsolve(J, F), F
 
 
-def load_flow(net,
-              load_flow_case,
-              max_iteration: int = 100,
-              tolerance: float = 1e-8):
-
+def read_load_flow_data(load_flow_case):
     f = open(load_flow_case, 'r')
     load_flow_data = json.load(f)
     del f
-    net.pq_buses, net.pv_buses, net.slack_buses = get_bus_load_flow_types(load_flow_data)
+    return load_flow_data
+
+
+def run_load_flow_from_case_file(net, load_flow_case) -> None:
+    """
+    Wrapper function for load flow to run with case file
+    """
+    load_flow_data = read_load_flow_data(load_flow_case)
+    p_scheduled_pu, q_scheduled_pu = set_scheduled_powers(net, load_flow_data)
     vm, va = flat_start(net, load_flow_data)
+    get_bus_load_flow_types(net, load_flow_data)
+    load_flow(net, p_scheduled_pu, q_scheduled_pu, vm, va)
+
+
+def load_flow(net,
+              p_scheduled_pu,
+              q_scheduled_pu,  # TODO: Bu degerleri net objesinin icinde tutmak daha iyi olabilir.
+              vm,
+              va,
+              max_iteration: int = 100,
+              tolerance: float = 1e-8) -> None:
+
     pvpq_list = sorted(list(net.pq_buses) + list(net.pv_buses))
     pq_list = sorted(list(net.pq_buses))
 
-    net.y_bus = net.full_y_bus.copy()  # TODO: This should be updated from a database of switch data
-    set_scheduled_powers(net, load_flow_data)
+    net.y_bus = net.full_y_bus.copy()
 
     iteration = 0
 
     while iteration < max_iteration:
         iteration += 1
         v = vm*exp(1j*va)
-        delta_x, F = load_flow_step(net, v, pvpq_list, pq_list)
+        delta_x, F = load_flow_step(net, v, pvpq_list, pq_list, p_scheduled_pu, q_scheduled_pu)
         delta_va = delta_x[0:len(pvpq_list)]
         delta_vm = delta_x[len(pvpq_list):len(pvpq_list) + len(pq_list)]
 
@@ -107,7 +123,3 @@ def load_flow(net,
 
         if iteration == max_iteration:
             print(f'Did not converge!')
-
-
-
-
