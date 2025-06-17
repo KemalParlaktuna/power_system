@@ -1,3 +1,5 @@
+from itertools import count
+
 from .create_element import *
 import json
 from numpy import exp, conj, zeros, clongdouble, random as rnd
@@ -5,11 +7,14 @@ from numpy import exp, conj, zeros, clongdouble, random as rnd
 
 
 def create_bus_from_dict(net, data) -> None:
+    count = 0
     for bus in data['bus_data'].values():
         create_bus(net,
                    bus_idx=bus['bus_idx'],
                    voltage_level_kv=bus['voltage_level_kv'],
                    coordinates=bus['coordinates'])
+        net.bus_map[bus['bus_idx']] = count
+        count += 1
 
 
 def create_load_from_dict(net, data) -> None:
@@ -55,6 +60,7 @@ def create_battery_from_dict(net, data: dict) -> None:
 
 
 def create_line_from_dict(net, data: dict) -> None:
+    count = 0
     for line in data['line_data'].values():
         create_line(net,
                     line_idx=line['line_idx'],
@@ -63,10 +69,14 @@ def create_line_from_dict(net, data: dict) -> None:
                     closed=line['closed'],
                     r_ohm=line['r_ohm'],
                     x_ohm=line['x_ohm'],
-                    b_total_mho=line['b_total_mho'])
+                    b_total_mho=line['b_total_mho']
+                    )
+        net.line_map[line['line_idx']] = count
+        count += 1
 
 
 def create_transformer_from_dict(net, data: dict) -> None:
+    count = 0
     for transformer in data['transformer_data'].values():
         create_transformer(net,
                            transformer_idx=transformer['transformer_idx'],
@@ -82,6 +92,8 @@ def create_transformer_from_dict(net, data: dict) -> None:
                            tap=transformer['tap'],
                            phase_shift=transformer['phase_shift']
                            )
+        net.transformer_map[transformer['transformer_idx']] = count
+        count += 1
 
 
 def create_sop_from_dict(net, data: dict) -> None:
