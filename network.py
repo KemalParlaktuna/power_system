@@ -55,6 +55,11 @@ class Net:
         self._vm_estimated = None
         self._va_estimated = None
 
+        # Index Maps
+        self._bus_map = {}
+        self._line_map = {}
+        self._transformer_map = {}
+
     def __repr__(self):
         return (f'System Properties\n'
                 f'-------------------------\n'
@@ -323,4 +328,28 @@ class Net:
     @va_estimated.setter
     def va_estimated(self, value):
         self._va_estimated = value
+
+    @property
+    def bus_map(self):
+        return self._bus_map
+
+    @bus_map.setter
+    def bus_map(self, value):
+        self._bus_map = value
+
+    @property
+    def line_map(self):
+        return self._line_map
+
+    @line_map.setter
+    def line_map(self, value):
+        self._line_map = value
+
+    @property
+    def transformer_map(self):
+        return self._transformer_map
+
+    @transformer_map.setter
+    def transformer_map(self, value):
+        self._transformer_map = value
     # endregion
