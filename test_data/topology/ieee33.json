@@ -367,16 +367,7 @@
         }
     },
     "static_generation": {},
-    "generator_data": {
-        "0": {
-            "generator_idx": 0,
-            "bus_idx": 0,
-            "min_p_mw": 0.0,
-            "max_p_mw": 10.0,
-            "min_q_mvar": -10.0,
-            "max_q_mvar": 10.0
-        }
-    },
+    "generator_data": {},
     "shunt_data": {},
     "battery_data": {},
     "line_data": {

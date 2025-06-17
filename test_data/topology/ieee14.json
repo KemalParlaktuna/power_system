@@ -150,12 +150,12 @@
     "static_generation": {},
     "generator_data": {
         "0": {
-            "generator_idx": 4,
-            "bus_idx": 0,
+            "generator_idx": 0,
+            "bus_idx": 1,
             "min_p_mw": 0.0,
-            "max_p_mw": 332.40000000000003,
-            "min_q_mvar": 0.0,
-            "max_q_mvar": 10.0
+            "max_p_mw": 140.0,
+            "min_q_mvar": -40.0,
+            "max_q_mvar": 50.0
         },
         "1": {
             "generator_idx": 1,

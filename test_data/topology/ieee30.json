@@ -291,12 +291,12 @@
     "static_generation": {},
     "generator_data": {
         "0": {
-            "generator_idx": 5,
-            "bus_idx": 0,
+            "generator_idx": 0,
+            "bus_idx": 1,
             "min_p_mw": 0.0,
             "max_p_mw": 80.0,
             "min_q_mvar": -20.0,
-            "max_q_mvar": 150.0
+            "max_q_mvar": 60.0
         },
         "1": {
             "generator_idx": 1,

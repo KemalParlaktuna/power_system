@@ -1214,12 +1214,12 @@
     "static_generation": {},
     "generator_data": {
         "0": {
-            "generator_idx": 53,
-            "bus_idx": 68,
+            "generator_idx": 0,
+            "bus_idx": 0,
             "min_p_mw": 0.0,
-            "max_p_mw": 805.2,
-            "min_q_mvar": -300.0,
-            "max_q_mvar": 300.0
+            "max_p_mw": 100.0,
+            "min_q_mvar": -5.0,
+            "max_q_mvar": 15.0
         },
         "1": {
             "generator_idx": 1,
@@ -3566,7 +3566,7 @@
             "r_pu": 0.13662000000000002,
             "x_pu": 1.584,
             "gm_pu": 0.0,
-            "bm_pu": -0.0064444444444444,
+            "bm_pu": -0.0,
             "tap": 1,
             "phase_shift": 0
         },
@@ -3594,7 +3594,7 @@
             "r_pu": 0.17325,
             "x_pu": 1.9998,
             "gm_pu": 0.0,
-            "bm_pu": -0.0081616161616162,
+            "bm_pu": -0.0,
             "tap": 1,
             "phase_shift": 0
         },
@@ -3622,7 +3622,7 @@
             "r_pu": 2.7997199999999998,
             "x_pu": 20.5326,
             "gm_pu": 0.0,
-            "bm_pu": -0.0004494949494949,
+            "bm_pu": -0.0,
             "tap": 1,
             "phase_shift": 0
         },
@@ -3636,7 +3636,7 @@
             "r_pu": 0.03366,
             "x_pu": 0.40095,
             "gm_pu": 0.0,
-            "bm_pu": -0.0016565656565657,
+            "bm_pu": -0.0,
             "tap": 1,
             "phase_shift": 0
         }
