@@ -62,8 +62,8 @@ def create_edge_trace(net):
     line_x, line_y, line_label_x, line_label_y = create_edge_info(net.lines)
     for line in net.lines.values():
         edge_labels.append(f'Line {line.idx}<br>'                           
-                           f'From Bus Name: {line.from_bus.bus_name}<br>'
-                           f'To Bus Name: {line.to_bus.bus_name}<br>'
+                           f'From Bus ID: {line.from_bus.bus_idx}<br>'
+                           f'To Bus ID: {line.to_bus.bus_idx}<br>'
                            f'R:{line.r_ohm} ohm<br>'
                            f'X:{line.x_ohm} ohm<br>'
                            f'B:{line.b_total_mho} mho<br>')
@@ -71,9 +71,9 @@ def create_edge_trace(net):
     transformer_x, transformer_y, transformer_label_x, transformer_label_y = create_edge_info(net.transformers)
     for transformer in net.transformers.values():
         edge_labels.append(f'Transfomer {transformer.idx}<br>'
-                           f'From Bus Name: {transformer.from_bus.bus_name}<br>'
+                           f'From Bus ID: {transformer.from_bus.bus_idx}<br>'
                            f'From Bus Voltage Level: {transformer.from_bus.voltage_level_kv} kV<br>'
-                           f'To Bus Name: {transformer.to_bus.bus_name}<br>'
+                           f'To Bus ID: {transformer.to_bus.bus_idx}<br>'
                            f'To Bus Voltage Level: {transformer.to_bus.voltage_level_kv} kV<br>'
                            f'R: {transformer.r_pu} pu<br>'
                            f'X: {transformer.x_pu} pu<br>'
@@ -83,8 +83,8 @@ def create_edge_trace(net):
     sop_x, sop_y, sop_label_x, sop_label_y = create_edge_info(net.soft_open_points)
     for sop in net.soft_open_points.values():
         edge_labels.append(f'SOP {sop.idx}<br>'
-                           f'From Bus Name: {sop.from_bus.bus_name}<br>'
-                           f'To Bus Name: {sop.to_bus.bus_name}<br>'
+                           f'From Bus ID: {sop.from_bus.bus_idx}<br>'
+                           f'To Bus ID: {sop.to_bus.bus_idx}<br>'
                            f'P: {sop.p_mw} MW<br>'
                            f'Q_from_to: {sop.q_mvar_from_to} MVAr<br>'
                            f'Q_to_from: {sop.q_mvar_to_from} MVAr<br>'
@@ -145,7 +145,6 @@ def create_node_trace(net, color_rule=None):
         node_x.append(x)
         node_y.append(y)
         node_labels.append(f'Bus ID: {bus.bus_idx} <br>'
-                           f'{bus.bus_name} <br>'
                            f'Voltage Level: {bus.voltage_level_kv} kV <br>')
         if color_rule == 'voltage_level_kv':
             node_color.append(bus.voltage_level_kv)
@@ -182,7 +181,6 @@ def create_node_trace_colored(net):
 
         # Hover text
         node_labels.append(f'Bus ID: {bus.bus_idx} <br>'
-                           f'{bus.bus_name} <br>'
                            f'Voltage Level: {bus.voltage_level_kv} kV <br>')
 
         # Color by energized status
