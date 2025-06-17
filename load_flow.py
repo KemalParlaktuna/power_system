@@ -9,10 +9,12 @@ def flat_start(net, load_flow_data):
     vm = ones(len(net.buses))
     va = zeros(len(net.buses))
     for generation in load_flow_data['generation'].values():
-        vm[generation['bus_idx']] = generation['vm_pu']
+        bus = net.bus_map[generation['bus_idx']]
+        vm[bus] = generation['vm_pu']
     for bus_idx, slack_bus in load_flow_data['slack_bus'].items():
-        vm[int(bus_idx)] = slack_bus['vm_pu']
-        va[int(bus_idx)] = deg2rad(slack_bus['va_degree'])
+        bus = net.bus_map[int(bus_idx)]
+        vm[bus] = slack_bus['vm_pu']
+        va[bus] = deg2rad(slack_bus['va_degree'])
     return vm, va
 
 
@@ -21,25 +23,29 @@ def get_bus_load_flow_types(net, load_flow_data) -> None:
     net.pv_buses = set()
     net.slack_buses = set()
     for bus, bus_type in load_flow_data['load_flow_type'].items():
+        i = net.bus_map[int(bus)]
         if bus_type == 'PQ':
-            net.pq_buses.add(int(bus))
+            net.pq_buses.add(i)
         elif bus_type == 'PV':
-            net.pv_buses.add(int(bus))
+            net.pv_buses.add(i)
         else:
-            net.slack_buses.add(int(bus))
+            net.slack_buses.add(i)
 
 
 def set_scheduled_powers(net, load_flow_data):
     p_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
     q_scheduled_pu = zeros((len(net.buses), 1), dtype=longdouble)
     for generation in load_flow_data['generation'].values():
-        p_scheduled_pu[generation['bus_idx']] += net.mw_to_pu(generation['p_mw'])
+        bus = net.bus_map[generation['bus_idx']]
+        p_scheduled_pu[bus] += net.mw_to_pu(generation['p_mw'])
     for load in load_flow_data['load'].values():
-        p_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['p_mw'])
-        q_scheduled_pu[load['bus_idx']] -= net.mw_to_pu(load['q_mvar'])
+        bus = net.bus_map[load['bus_idx']]
+        p_scheduled_pu[bus] -= net.mw_to_pu(load['p_mw'])
+        q_scheduled_pu[bus] -= net.mw_to_pu(load['q_mvar'])
     for static_generation in load_flow_data['static_generation'].values():
-        p_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['p_mw'])
-        q_scheduled_pu[static_generation['bus_idx']] += net.mw_to_pu(static_generation['q_mvar'])
+        bus = net.bus_map[static_generation['bus_idx']]
+        p_scheduled_pu[bus] += net.mw_to_pu(static_generation['p_mw'])
+        q_scheduled_pu[bus] += net.mw_to_pu(static_generation['q_mvar'])
 
     return p_scheduled_pu, q_scheduled_pu
 
