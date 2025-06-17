@@ -1,0 +1,119 @@
+{
+    "load": {
+        "0": {
+            "load_idx": 0,
+            "bus_idx": 1,
+            "p_mw": 21.7,
+            "q_mvar": 12.7
+        },
+        "1": {
+            "load_idx": 1,
+            "bus_idx": 2,
+            "p_mw": 94.2,
+            "q_mvar": 19.0
+        },
+        "2": {
+            "load_idx": 2,
+            "bus_idx": 3,
+            "p_mw": 47.8,
+            "q_mvar": -3.9
+        },
+        "3": {
+            "load_idx": 3,
+            "bus_idx": 4,
+            "p_mw": 7.6,
+            "q_mvar": 1.6
+        },
+        "4": {
+            "load_idx": 4,
+            "bus_idx": 5,
+            "p_mw": 11.2,
+            "q_mvar": 7.5
+        },
+        "5": {
+            "load_idx": 5,
+            "bus_idx": 8,
+            "p_mw": 29.5,
+            "q_mvar": 16.6
+        },
+        "6": {
+            "load_idx": 6,
+            "bus_idx": 9,
+            "p_mw": 9.0,
+            "q_mvar": 5.8
+        },
+        "7": {
+            "load_idx": 7,
+            "bus_idx": 10,
+            "p_mw": 3.5,
+            "q_mvar": 1.8
+        },
+        "8": {
+            "load_idx": 8,
+            "bus_idx": 11,
+            "p_mw": 6.1,
+            "q_mvar": 1.6
+        },
+        "9": {
+            "load_idx": 9,
+            "bus_idx": 12,
+            "p_mw": 13.5,
+            "q_mvar": 5.8
+        },
+        "10": {
+            "load_idx": 10,
+            "bus_idx": 13,
+            "p_mw": 14.9,
+            "q_mvar": 5.0
+        }
+    },
+    "generation": {
+        "0": {
+            "generator_idx": 0,
+            "bus_idx": 1,
+            "vm_pu": 1.045,
+            "p_mw": 40.0
+        },
+        "1": {
+            "generator_idx": 1,
+            "bus_idx": 2,
+            "vm_pu": 1.01,
+            "p_mw": 0.0
+        },
+        "2": {
+            "generator_idx": 2,
+            "bus_idx": 5,
+            "vm_pu": 1.07,
+            "p_mw": 0.0
+        },
+        "3": {
+            "generator_idx": 3,
+            "bus_idx": 7,
+            "vm_pu": 1.09,
+            "p_mw": 0.0
+        }
+    },
+    "static_generation": {},
+    "slack_bus": {
+        "0": {
+            "vm_pu": 1.06,
+            "va_degree": 0.0
+        }
+    },
+    "load_flow_type": {
+        "0": "SLACK",
+        "1": "PV",
+        "2": "PV",
+        "3": "PQ",
+        "4": "PQ",
+        "5": "PV",
+        "6": "PQ",
+        "7": "PV",
+        "8": "PQ",
+        "9": "PQ",
+        "10": "PQ",
+        "11": "PQ",
+        "12": "PQ",
+        "13": "PQ"
+    }
+}
