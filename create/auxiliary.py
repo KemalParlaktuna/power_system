@@ -9,7 +9,6 @@ def create_bus_from_dict(net, data) -> None:
         create_bus(net,
                    bus_idx=bus['bus_idx'],
                    voltage_level_kv=bus['voltage_level_kv'],
-                   bus_name=bus['bus_name'],
                    coordinates=bus['coordinates'])
 
 
@@ -18,8 +17,8 @@ def create_load_from_dict(net, data) -> None:
         create_load(net,
                     load_idx=load['load_idx'],
                     bus_idx=load['bus_idx'],
-                    s_rated_mva=load['s_rated_mva'],
-                    load_name=load['load_name'])
+                    s_rated_mva=load['s_rated_mva']
+                    )
 
 
 def create_generation_from_dict(net, data: dict) -> None:
@@ -30,8 +29,8 @@ def create_generation_from_dict(net, data: dict) -> None:
                          min_p_mw=generation['min_p_mw'],
                          max_p_mw=generation['max_p_mw'],
                          min_q_mvar=generation['min_q_mvar'],
-                         max_q_mvar=generation['max_q_mvar'],
-                         generator_name=generation['generator_name'])
+                         max_q_mvar=generation['max_q_mvar']
+                         )
 
 
 def create_shunt_from_dict(net, data: dict) -> None:
@@ -51,8 +50,8 @@ def create_battery_from_dict(net, data: dict) -> None:
                        p_charge_mw=battery['p_charge_mw'],
                        p_discharge_mw=battery['p_discharge_mw'],
                        soc=battery['soc'],
-                       capacity_mwh=battery['capacity_mwh'],
-                       battery_name=battery['battery_name'])
+                       capacity_mwh=battery['capacity_mwh']
+                       )
 
 
 def create_line_from_dict(net, data: dict) -> None:

@@ -4,13 +4,11 @@ from .elements import *
 def create_bus(net,
                bus_idx: int,
                voltage_level_kv: float,
-               bus_name: str = 'NA',
                coordinates: str = '{"coordinates": [0, 0], "type": "Point"}') -> None:
 
     # Buses are nodes that all other elements connect to.
     net.buses[bus_idx] = Bus(bus_idx=bus_idx,
                              voltage_level_kv=voltage_level_kv,
-                             bus_name=bus_name,
                              coordinates=coordinates
                              )
 
@@ -18,13 +16,12 @@ def create_bus(net,
 def create_load(net,
                 load_idx: int,
                 bus_idx: int,
-                s_rated_mva: float,
-                load_name: str = 'NA') -> None:
+                s_rated_mva: float) -> None:
 
     net.loads[load_idx] = Load(idx=load_idx,
                                bus=net.buses[bus_idx],
-                               s_rated_mva=s_rated_mva,
-                               name=load_name)
+                               s_rated_mva=s_rated_mva
+                               )
 
 
 def create_generator(net,
@@ -33,30 +30,27 @@ def create_generator(net,
                      min_p_mw: float,
                      max_p_mw: float,
                      min_q_mvar: float,
-                     max_q_mvar: float,
-                     generator_name: str = 'NA') -> None:
+                     max_q_mvar: float) -> None:
 
     net.generators[generation_idx] = Generator(idx=generation_idx,
                                                bus=net.buses[bus_idx],
                                                min_p_mw=min_p_mw,
                                                max_p_mw=max_p_mw,
                                                min_q_mvar=min_q_mvar,
-                                               max_q_mvar=max_q_mvar,
-                                               name=generator_name)
+                                               max_q_mvar=max_q_mvar)
 
 
 def create_shunt(net,
                  shunt_idx: int,
                  bus_idx: int,
                  p_mw: float,
-                 q_mvar: float,
-                 shunt_name: str = 'NA') -> None:
+                 q_mvar: float) -> None:
 
     net.shunts[shunt_idx] = Shunt(idx=shunt_idx,
                                   bus=net.buses[bus_idx],
                                   p_mw=p_mw,
-                                  q_mvar=q_mvar,
-                                  name=shunt_name)
+                                  q_mvar=q_mvar
+                                  )
 
 
 def create_battery(net,
@@ -65,16 +59,15 @@ def create_battery(net,
                    p_charge_mw: float,
                    p_discharge_mw: float,
                    soc: float,
-                   capacity_mwh: float,
-                   battery_name: str = 'NA') -> None:
+                   capacity_mwh: float) -> None:
 
     net.batteries[battery_idx] = Battery(idx=battery_idx,
                                          bus=net.buses[bus_idx],
                                          p_charge_mw=p_charge_mw,
                                          p_discharge_mw=p_discharge_mw,
                                          soc=soc,
-                                         capacity_mwh=capacity_mwh,
-                                         name=battery_name)
+                                         capacity_mwh=capacity_mwh
+                                         )
 
 
 def create_line(net,

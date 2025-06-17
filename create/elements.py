@@ -8,14 +8,9 @@ class Bus(ABC):
     bus_idx: int  # Bus ID
     voltage_level_kv: float  # Line-to-line voltage level
     coordinates: str  # Bus coordinates in geojson string format
-    bus_name: str = 'NA'  # Bus name
     energized: bool = True
     voltage_magnitude_pu: float = field(init=False, default=1)  # Simulation instant voltage magnitude
     voltage_angle_rad: float = field(init=False, default=0)  # Simulation instant voltage angle
-
-    def __post_init__(self):
-        if self.bus_name == 'NA':
-            self.bus_name = f'Bus {self.bus_idx}'
 # endregion
 
 
@@ -24,7 +19,6 @@ class Bus(ABC):
 class Shunt_Element(ABC):  # TODO: If two of the same type of shunt element is connected to the same bus give them an internal ID (Bus 1 Load 1, Bus 1 Load 2 etc.)
     idx: int   # Equipment ID
     bus: Bus  # Bus clss instant that the shunt equipment is connected
-    name: str = 'NA'  # Name of the equipment
 
 
 @dataclass
@@ -32,10 +26,6 @@ class Load(Shunt_Element):
     s_rated_mva: float  # Rated S of the load
     p_mw: float = field(init=False, default=0.0)  # Simulation instant P
     q_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
-
-    def __post_init__(self):
-        if self.name == 'NA':
-            self.name = f'Load {self.idx} '
 
 
 @dataclass
@@ -47,10 +37,6 @@ class Generator(Shunt_Element):
     p_mw: float = field(init=False, default=0.0)  # Simulation instant P
     q_mvar: float = field(init=False, default=0.0)  # Simulation instant Q
 
-    def __post_init__(self):
-        if self.name == 'NA':
-            self.name = f'Generator {self.idx} '
-
 
 @dataclass
 class Battery(Shunt_Element):
@@ -60,19 +46,12 @@ class Battery(Shunt_Element):
     soc: float  # State of charge (0-1)
     capacity_mwh: float  # Energy capacity
 
-    def __post_init__(self):
-        if self.name == 'NA':
-            self.name = f'Battery {self.idx} '
-
 
 @dataclass
 class Shunt(Shunt_Element):
     p_mw: float  # Shunt element P
     q_mvar: float  # Shunt element Q
 
-    def __post_init__(self):
-        if self.name == 'NA':
-            self.name = f'Shunt {self.idx} '
 
 # endregion
 
