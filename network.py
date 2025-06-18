@@ -35,9 +35,6 @@ class Net:
         self._y_bus_from_to = None
         self._y_bus_to_from = None
 
-        self._from_buses = []  # Maybe not needed to store as an attribute
-        self._to_buses = []
-
         # Load Flow Types
         self._pq_buses = None  # Maybe not needed to store as an attribute
         self._pv_buses = None
@@ -240,22 +237,6 @@ class Net:
     @y_bus.setter
     def y_bus(self, value):
         self._y_bus = value
-
-    @property
-    def from_buses(self):
-        return self._from_buses
-
-    @from_buses.setter
-    def from_buses(self, value):
-        self._from_buses = value
-
-    @property
-    def to_buses(self):
-        return self._to_buses
-
-    @to_buses.setter
-    def to_buses(self, value):
-        self._to_buses = value
 
     @property
     def pq_buses(self):
