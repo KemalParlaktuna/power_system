@@ -3,6 +3,9 @@ from scipy.sparse import vstack, hstack, csr_matrix as sparse
 from scipy.sparse.linalg import spsolve
 from .ds_dx import calculate_dsbus_dx
 import json
+from .network_matrices import remove_line_from_y_bus, remove_transformer_from_y_bus
+import networkx as nx
+from itertools import combinations
 
 
 def flat_start(net, load_flow_data):
@@ -30,6 +33,34 @@ def get_bus_load_flow_types(net, load_flow_data) -> None:
             net.pv_buses.add(i)
         else:
             net.slack_buses.add(i)
+
+
+def check_multiple_slacks(net) -> None:
+    G = nx.Graph()
+
+    # Add lines as edges
+    for line in net.lines.values():
+        if line.closed:
+            i = net.bus_map[line.from_bus.bus_idx]
+            j = net.bus_map[line.to_bus.bus_idx]
+            G.add_edge(i, j)
+
+    # Add transformers as edges
+    for transformer in net.transformers.values():
+        if transformer.closed:
+            i = net.bus_map[transformer.from_bus.bus_idx]
+            j = net.bus_map[transformer.to_bus.bus_idx]
+            G.add_edge(i, j)
+
+    # Add all buses as nodes (redundant if all are already in edges, but safe)
+    for bus in net.buses.values():
+        i = net.bus_map[bus.bus_idx]
+        G.add_node(i)
+
+    # Check if any two slack buses are connected
+    for u, v in combinations(net.slack_buses, 2):
+        if nx.has_path(G, u, v):
+            raise ValueError(f"Slack buses {u} and {v} are electrically connected.")
 
 
 def set_scheduled_powers(net, load_flow_data):
@@ -92,12 +123,25 @@ def run_load_flow_from_case_file(net, load_flow_case) -> None:
     p_scheduled_pu, q_scheduled_pu = set_scheduled_powers(net, load_flow_data)
     vm, va = flat_start(net, load_flow_data)
     get_bus_load_flow_types(net, load_flow_data)
+    net.y_bus = net.full_y_bus.copy()
+    update_y_bus(net, load_flow_data)
+    check_multiple_slacks(net)
     load_flow(net, p_scheduled_pu, q_scheduled_pu, vm, va)
+
+
+def update_y_bus(net, load_flow_data):
+    for line_idx in load_flow_data['open_line'].values():
+        net.lines[line_idx].closed = False
+        remove_line_from_y_bus(net, net.lines[line_idx])
+
+    for transformer_idx in load_flow_data['open_transformer'].values():
+        net.transformers[transformer_idx].closed = False
+        remove_transformer_from_y_bus(net, net.transformers[transformer_idx])
 
 
 def load_flow(net,
               p_scheduled_pu,
-              q_scheduled_pu,  # TODO: Bu degerleri net objesinin icinde tutmak daha iyi olabilir.
+              q_scheduled_pu,
               vm,
               va,
               max_iteration: int = 100,
@@ -105,8 +149,6 @@ def load_flow(net,
 
     pvpq_list = sorted(list(net.pq_buses) + list(net.pv_buses))
     pq_list = sorted(list(net.pq_buses))
-
-    net.y_bus = net.full_y_bus.copy()
 
     iteration = 0
 
