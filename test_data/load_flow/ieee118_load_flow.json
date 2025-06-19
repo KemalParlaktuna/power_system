@@ -1041,5 +1041,7 @@
         "115": "PV",
         "116": "PQ",
         "117": "PQ"
-    }
+    },
+    "open_line": {},
+    "open_transformer": {}
 }
