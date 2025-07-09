@@ -98,8 +98,8 @@ def remove_transformer_from_y_bus(net, transformer):
         tap = 1
     a = tap * exp(1j * deg2rad(phase_shift))
 
-    net.full_y_bus[i, i] += y_series / (tap ** 2) + y_shunt / 2
-    net.full_y_bus[i, j] -= y_series / conjugate(a)
+    net.y_bus[i, i] += y_series / (tap ** 2) + y_shunt / 2
+    net.y_bus[i, j] -= y_series / conjugate(a)
     net.full_y_bus[j, i] -= y_series / a
     net.full_y_bus[j, j] += y_series + y_shunt / 2
     transformer_idx = net.transformer_map[transformer.idx]
