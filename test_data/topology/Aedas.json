@@ -1,0 +1,2823 @@
+{
+    "system_data": {
+        "network_name": "ANTALYA_TM",
+        "s_base_mva": 1,
+        "frequency_hz": 50
+    },
+    "bus_data": {
+        "0": {
+            "bus_idx": 0,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_PGNS_691001",
+            "coordinates": "{\"coordinates\": [30.668224473605004, 36.914212999999975], \"type\": \"Point\"}"
+        },
+        "1": {
+            "bus_idx": 1,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_PGSS_693002",
+            "coordinates": "{\"coordinates\": [30.66377347360501, 36.893263], \"type\": \"Point\"}"
+        },
+        "2": {
+            "bus_idx": 2,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_PGSS_694782",
+            "coordinates": "{\"coordinates\": [30.671601473605005, 36.89124299999999], \"type\": \"Point\"}"
+        },
+        "3": {
+            "bus_idx": 3,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_SS_693001",
+            "coordinates": "{\"coordinates\": [30.675171473605005, 36.887083999999994], \"type\": \"Point\"}"
+        },
+        "4": {
+            "bus_idx": 4,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_SS_697272",
+            "coordinates": "{\"coordinates\": [30.67155047360501, 36.889872999999994], \"type\": \"Point\"}"
+        },
+        "5": {
+            "bus_idx": 5,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_SS_707228",
+            "coordinates": "{\"coordinates\": [30.66154447360501, 36.886269], \"type\": \"Point\"}"
+        },
+        "6": {
+            "bus_idx": 6,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_SS_707246",
+            "coordinates": "{\"coordinates\": [30.663789473605014, 36.893381999999995], \"type\": \"Point\"}"
+        },
+        "7": {
+            "bus_idx": 7,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_PGTS_694783_1549486",
+            "coordinates": "{\"coordinates\": [30.67833247360501, 36.90418299999999], \"type\": \"Point\"}"
+        },
+        "8": {
+            "bus_idx": 8,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_PGTS_707245_6484171",
+            "coordinates": "{\"coordinates\": [30.66381847360501, 36.893381999999995], \"type\": \"Point\"}"
+        },
+        "9": {
+            "bus_idx": 9,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_PGTS_707247_7678024",
+            "coordinates": "{\"coordinates\": [30.66142347360501, 36.88524399999998], \"type\": \"Point\"}"
+        },
+        "10": {
+            "bus_idx": 10,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694000_1549246",
+            "coordinates": "{\"coordinates\": [30.665364473605006, 36.89279399999999], \"type\": \"Point\"}"
+        },
+        "11": {
+            "bus_idx": 11,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694001_1549247",
+            "coordinates": "{\"coordinates\": [30.683531473605008, 36.900253], \"type\": \"Point\"}"
+        },
+        "12": {
+            "bus_idx": 12,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694002_1549249",
+            "coordinates": "{\"coordinates\": [30.68477647360501, 36.904592], \"type\": \"Point\"}"
+        },
+        "13": {
+            "bus_idx": 13,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694006_1549253",
+            "coordinates": "{\"coordinates\": [30.66831847360501, 36.89077399999999], \"type\": \"Point\"}"
+        },
+        "14": {
+            "bus_idx": 14,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694010_1549258",
+            "coordinates": "{\"coordinates\": [30.68403347360501, 36.903582999999976], \"type\": \"Point\"}"
+        },
+        "15": {
+            "bus_idx": 15,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694031_1549240",
+            "coordinates": "{\"coordinates\": [30.68101747360501, 36.891482999999994], \"type\": \"Point\"}"
+        },
+        "16": {
+            "bus_idx": 16,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694058_1548979",
+            "coordinates": "{\"coordinates\": [30.670543473605008, 36.901966], \"type\": \"Point\"}"
+        },
+        "17": {
+            "bus_idx": 17,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694059_1548983",
+            "coordinates": "{\"coordinates\": [30.669692473605007, 36.896323], \"type\": \"Point\"}"
+        },
+        "18": {
+            "bus_idx": 18,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694060_1548984",
+            "coordinates": "{\"coordinates\": [30.666128473605006, 36.89276000000002], \"type\": \"Point\"}"
+        },
+        "19": {
+            "bus_idx": 19,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694061_1548985",
+            "coordinates": "{\"coordinates\": [30.66785547360501, 36.893364], \"type\": \"Point\"}"
+        },
+        "20": {
+            "bus_idx": 20,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694062_1548964",
+            "coordinates": "{\"coordinates\": [30.67962847360501, 36.901829], \"type\": \"Point\"}"
+        },
+        "21": {
+            "bus_idx": 21,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694063_1548966",
+            "coordinates": "{\"coordinates\": [30.677795473605006, 36.901201999999984], \"type\": \"Point\"}"
+        },
+        "22": {
+            "bus_idx": 22,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694064_1548969",
+            "coordinates": "{\"coordinates\": [30.67642347360501, 36.89936799999998], \"type\": \"Point\"}"
+        },
+        "23": {
+            "bus_idx": 23,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694065_1549144",
+            "coordinates": "{\"coordinates\": [30.67310147360501, 36.90026599999999], \"type\": \"Point\"}"
+        },
+        "24": {
+            "bus_idx": 24,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694066_1548970",
+            "coordinates": "{\"coordinates\": [30.67421547360501, 36.898959999999995], \"type\": \"Point\"}"
+        },
+        "25": {
+            "bus_idx": 25,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694067_1548972",
+            "coordinates": "{\"coordinates\": [30.673781473605008, 36.89675299999999], \"type\": \"Point\"}"
+        },
+        "26": {
+            "bus_idx": 26,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694068_10384306",
+            "coordinates": "{\"coordinates\": [30.681070473605004, 36.89923499999999], \"type\": \"Point\"}"
+        },
+        "27": {
+            "bus_idx": 27,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694069_1548959",
+            "coordinates": "{\"coordinates\": [30.68193247360501, 36.89863099999999], \"type\": \"Point\"}"
+        },
+        "28": {
+            "bus_idx": 28,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694070_1548958",
+            "coordinates": "{\"coordinates\": [30.680773473605008, 36.89615699999998], \"type\": \"Point\"}"
+        },
+        "29": {
+            "bus_idx": 29,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694071_1548955",
+            "coordinates": "{\"coordinates\": [30.678447473605008, 36.89456099999998], \"type\": \"Point\"}"
+        },
+        "30": {
+            "bus_idx": 30,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694072_1548950",
+            "coordinates": "{\"coordinates\": [30.682301473605005, 36.90281899999999], \"type\": \"Point\"}"
+        },
+        "31": {
+            "bus_idx": 31,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694073_10384352",
+            "coordinates": "{\"coordinates\": [30.68393647360501, 36.897785000000006], \"type\": \"Point\"}"
+        },
+        "32": {
+            "bus_idx": 32,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694078_11304723",
+            "coordinates": "{\"coordinates\": [30.68421047360501, 36.895715999999986], \"type\": \"Point\"}"
+        },
+        "33": {
+            "bus_idx": 33,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694079_1548947",
+            "coordinates": "{\"coordinates\": [30.68359747360501, 36.892552999999985], \"type\": \"Point\"}"
+        },
+        "34": {
+            "bus_idx": 34,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694083_1549264",
+            "coordinates": "{\"coordinates\": [30.66744247360501, 36.88989699999998], \"type\": \"Point\"}"
+        },
+        "35": {
+            "bus_idx": 35,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694084_1549266",
+            "coordinates": "{\"coordinates\": [30.66843647360501, 36.89818399999998], \"type\": \"Point\"}"
+        },
+        "36": {
+            "bus_idx": 36,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694087_1549274",
+            "coordinates": "{\"coordinates\": [30.68545847360501, 36.90093899999999], \"type\": \"Point\"}"
+        },
+        "37": {
+            "bus_idx": 37,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694094_1549158",
+            "coordinates": "{\"coordinates\": [30.685021473605012, 36.89171999999999], \"type\": \"Point\"}"
+        },
+        "38": {
+            "bus_idx": 38,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694103_1549165",
+            "coordinates": "{\"coordinates\": [30.68471247360501, 36.88787099999999], \"type\": \"Point\"}"
+        },
+        "39": {
+            "bus_idx": 39,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694104_1549163",
+            "coordinates": "{\"coordinates\": [30.68460147360501, 36.88944399999997], \"type\": \"Point\"}"
+        },
+        "40": {
+            "bus_idx": 40,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694105_1549162",
+            "coordinates": "{\"coordinates\": [30.68371347360501, 36.88825799999999], \"type\": \"Point\"}"
+        },
+        "41": {
+            "bus_idx": 41,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694107_1548999",
+            "coordinates": "{\"coordinates\": [30.66725047360501, 36.89193699999999], \"type\": \"Point\"}"
+        },
+        "42": {
+            "bus_idx": 42,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694108_1549000",
+            "coordinates": "{\"coordinates\": [30.665715473605008, 36.890892], \"type\": \"Point\"}"
+        },
+        "43": {
+            "bus_idx": 43,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694109_1549045",
+            "coordinates": "{\"coordinates\": [30.672973473605005, 36.890211999999984], \"type\": \"Point\"}"
+        },
+        "44": {
+            "bus_idx": 44,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694110_1549044",
+            "coordinates": "{\"coordinates\": [30.674143473605007, 36.890822999999976], \"type\": \"Point\"}"
+        },
+        "45": {
+            "bus_idx": 45,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694111_1549043",
+            "coordinates": "{\"coordinates\": [30.67687547360501, 36.88805099999998], \"type\": \"Point\"}"
+        },
+        "46": {
+            "bus_idx": 46,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694112_1549046",
+            "coordinates": "{\"coordinates\": [30.670345473605007, 36.886794999999985], \"type\": \"Point\"}"
+        },
+        "47": {
+            "bus_idx": 47,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694113_1548939",
+            "coordinates": "{\"coordinates\": [30.66598547360501, 36.88883499999998], \"type\": \"Point\"}"
+        },
+        "48": {
+            "bus_idx": 48,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694114_1548990",
+            "coordinates": "{\"coordinates\": [30.672175473605012, 36.89236799999999], \"type\": \"Point\"}"
+        },
+        "49": {
+            "bus_idx": 49,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694115_1549180",
+            "coordinates": "{\"coordinates\": [30.68151547360501, 36.90488], \"type\": \"Point\"}"
+        },
+        "50": {
+            "bus_idx": 50,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694117_1548986",
+            "coordinates": "{\"coordinates\": [30.668347473605007, 36.89427599999999], \"type\": \"Point\"}"
+        },
+        "51": {
+            "bus_idx": 51,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694119_1549157",
+            "coordinates": "{\"coordinates\": [30.68349447360501, 36.89087799999999], \"type\": \"Point\"}"
+        },
+        "52": {
+            "bus_idx": 52,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694134_1549194",
+            "coordinates": "{\"coordinates\": [30.68493447360501, 36.90255599999999], \"type\": \"Point\"}"
+        },
+        "53": {
+            "bus_idx": 53,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694154_1549164",
+            "coordinates": "{\"coordinates\": [30.68618147360501, 36.88769500000001], \"type\": \"Point\"}"
+        },
+        "54": {
+            "bus_idx": 54,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694156_1549155",
+            "coordinates": "{\"coordinates\": [30.686009473605004, 36.893068], \"type\": \"Point\"}"
+        },
+        "55": {
+            "bus_idx": 55,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694158_1548978",
+            "coordinates": "{\"coordinates\": [30.670430473605006, 36.899049], \"type\": \"Point\"}"
+        },
+        "56": {
+            "bus_idx": 56,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694159_1548982",
+            "coordinates": "{\"coordinates\": [30.67258647360501, 36.89899799999999], \"type\": \"Point\"}"
+        },
+        "57": {
+            "bus_idx": 57,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694164_10383514",
+            "coordinates": "{\"coordinates\": [30.685469473605007, 36.90632699999998], \"type\": \"Point\"}"
+        },
+        "58": {
+            "bus_idx": 58,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694168_1549207",
+            "coordinates": "{\"coordinates\": [30.680621473605004, 36.90252599999999], \"type\": \"Point\"}"
+        },
+        "59": {
+            "bus_idx": 59,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694171_1549210",
+            "coordinates": "{\"coordinates\": [30.68041247360501, 36.89440999999999], \"type\": \"Point\"}"
+        },
+        "60": {
+            "bus_idx": 60,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694174_1549213",
+            "coordinates": "{\"coordinates\": [30.68601047360501, 36.899121], \"type\": \"Point\"}"
+        },
+        "61": {
+            "bus_idx": 61,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694181_1549223",
+            "coordinates": "{\"coordinates\": [30.683016473605008, 36.889300999999996], \"type\": \"Point\"}"
+        },
+        "62": {
+            "bus_idx": 62,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694184_1549228",
+            "coordinates": "{\"coordinates\": [30.668747473605006, 36.895582999999995], \"type\": \"Point\"}"
+        },
+        "63": {
+            "bus_idx": 63,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694188_1549231",
+            "coordinates": "{\"coordinates\": [30.671537473605007, 36.892801999999996], \"type\": \"Point\"}"
+        },
+        "64": {
+            "bus_idx": 64,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694196_1549147",
+            "coordinates": "{\"coordinates\": [30.67962347360501, 36.896758], \"type\": \"Point\"}"
+        },
+        "65": {
+            "bus_idx": 65,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694198_1549317",
+            "coordinates": "{\"coordinates\": [30.686262473605005, 36.892401], \"type\": \"Point\"}"
+        },
+        "66": {
+            "bus_idx": 66,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694218_1549286",
+            "coordinates": "{\"coordinates\": [30.670535473605007, 36.89109599999999], \"type\": \"Point\"}"
+        },
+        "67": {
+            "bus_idx": 67,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694219_1549288",
+            "coordinates": "{\"coordinates\": [30.685860473605008, 36.89472599999999], \"type\": \"Point\"}"
+        },
+        "68": {
+            "bus_idx": 68,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694220_1548975",
+            "coordinates": "{\"coordinates\": [30.672330473605008, 36.89451799999999], \"type\": \"Point\"}"
+        },
+        "69": {
+            "bus_idx": 69,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694232_1548977",
+            "coordinates": "{\"coordinates\": [30.678023473605013, 36.90298699999999], \"type\": \"Point\"}"
+        },
+        "70": {
+            "bus_idx": 70,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694257_1549292",
+            "coordinates": "{\"coordinates\": [30.669532473605013, 36.892108], \"type\": \"Point\"}"
+        },
+        "71": {
+            "bus_idx": 71,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694268_1549298",
+            "coordinates": "{\"coordinates\": [30.675813473605007, 36.891021], \"type\": \"Point\"}"
+        },
+        "72": {
+            "bus_idx": 72,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694293_1548976",
+            "coordinates": "{\"coordinates\": [30.673494473605004, 36.89332499999998], \"type\": \"Point\"}"
+        },
+        "73": {
+            "bus_idx": 73,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694294_1548974",
+            "coordinates": "{\"coordinates\": [30.671383473605008, 36.89557299999999], \"type\": \"Point\"}"
+        },
+        "74": {
+            "bus_idx": 74,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694295_1548973",
+            "coordinates": "{\"coordinates\": [30.67118447360501, 36.89631399999999], \"type\": \"Point\"}"
+        },
+        "75": {
+            "bus_idx": 75,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694296_1548952",
+            "coordinates": "{\"coordinates\": [30.675173473605007, 36.893016], \"type\": \"Point\"}"
+        },
+        "76": {
+            "bus_idx": 76,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694297_1548953",
+            "coordinates": "{\"coordinates\": [30.674288473605007, 36.894103999999984], \"type\": \"Point\"}"
+        },
+        "77": {
+            "bus_idx": 77,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694298_1548954",
+            "coordinates": "{\"coordinates\": [30.676328473605007, 36.89569499999998], \"type\": \"Point\"}"
+        },
+        "78": {
+            "bus_idx": 78,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694299_1549153",
+            "coordinates": "{\"coordinates\": [30.675005473605005, 36.89222399999997], \"type\": \"Point\"}"
+        },
+        "79": {
+            "bus_idx": 79,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694300_1549154",
+            "coordinates": "{\"coordinates\": [30.67991347360501, 36.89270199999998], \"type\": \"Point\"}"
+        },
+        "80": {
+            "bus_idx": 80,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694301_1549156",
+            "coordinates": "{\"coordinates\": [30.681105473605008, 36.889614999999985], \"type\": \"Point\"}"
+        },
+        "81": {
+            "bus_idx": 81,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694307_1548951",
+            "coordinates": "{\"coordinates\": [30.67304447360501, 36.891441999999984], \"type\": \"Point\"}"
+        },
+        "82": {
+            "bus_idx": 82,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694313_1548989",
+            "coordinates": "{\"coordinates\": [30.67026847360501, 36.893373999999994], \"type\": \"Point\"}"
+        },
+        "83": {
+            "bus_idx": 83,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694319_1549301",
+            "coordinates": "{\"coordinates\": [30.67158147360501, 36.890964999999994], \"type\": \"Point\"}"
+        },
+        "84": {
+            "bus_idx": 84,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694329_1549319",
+            "coordinates": "{\"coordinates\": [30.683321473605005, 36.89299499999999], \"type\": \"Point\"}"
+        },
+        "85": {
+            "bus_idx": 85,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694335_1549243",
+            "coordinates": "{\"coordinates\": [30.67464447360501, 36.90233499999999], \"type\": \"Point\"}"
+        },
+        "86": {
+            "bus_idx": 86,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694340_1548967",
+            "coordinates": "{\"coordinates\": [30.676326473605005, 36.900333], \"type\": \"Point\"}"
+        },
+        "87": {
+            "bus_idx": 87,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694342_1549237",
+            "coordinates": "{\"coordinates\": [30.68215447360501, 36.89999299999999], \"type\": \"Point\"}"
+        },
+        "88": {
+            "bus_idx": 88,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694690_1549181",
+            "coordinates": "{\"coordinates\": [30.683300473605005, 36.906006], \"type\": \"Point\"}"
+        },
+        "89": {
+            "bus_idx": 89,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694691_1548987",
+            "coordinates": "{\"coordinates\": [30.67028947360501, 36.89463], \"type\": \"Point\"}"
+        },
+        "90": {
+            "bus_idx": 90,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694692_1548988",
+            "coordinates": "{\"coordinates\": [30.671155473605005, 36.89363499999998], \"type\": \"Point\"}"
+        },
+        "91": {
+            "bus_idx": 91,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694757_1548957",
+            "coordinates": "{\"coordinates\": [30.682027473605004, 36.89437399999998], \"type\": \"Point\"}"
+        },
+        "92": {
+            "bus_idx": 92,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694915_6335083",
+            "coordinates": "{\"coordinates\": [30.664522473605004, 36.879386], \"type\": \"Point\"}"
+        },
+        "93": {
+            "bus_idx": 93,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694945_7352372",
+            "coordinates": "{\"coordinates\": [30.67614747360501, 36.884088999999996], \"type\": \"Point\"}"
+        },
+        "94": {
+            "bus_idx": 94,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694979_12354176",
+            "coordinates": "{\"coordinates\": [30.682238473605004, 36.897013999999984], \"type\": \"Point\"}"
+        },
+        "95": {
+            "bus_idx": 95,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697004",
+            "coordinates": "{\"coordinates\": [30.673633473605005, 36.88880699999997], \"type\": \"Point\"}"
+        },
+        "96": {
+            "bus_idx": 96,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697007",
+            "coordinates": "{\"coordinates\": [30.676421473605014, 36.886573999999996], \"type\": \"Point\"}"
+        },
+        "97": {
+            "bus_idx": 97,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697014",
+            "coordinates": "{\"coordinates\": [30.66665747360501, 36.89573799999998], \"type\": \"Point\"}"
+        },
+        "98": {
+            "bus_idx": 98,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697025_1548963",
+            "coordinates": "{\"coordinates\": [30.678620473605005, 36.90416399999998], \"type\": \"Point\"}"
+        },
+        "99": {
+            "bus_idx": 99,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697026_1548956",
+            "coordinates": "{\"coordinates\": [30.68130847360501, 36.89497099999999], \"type\": \"Point\"}"
+        },
+        "100": {
+            "bus_idx": 100,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697027_1548965",
+            "coordinates": "{\"coordinates\": [30.67684247360501, 36.901495], \"type\": \"Point\"}"
+        },
+        "101": {
+            "bus_idx": 101,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697028_1548941",
+            "coordinates": "{\"coordinates\": [30.665113473605007, 36.888156], \"type\": \"Point\"}"
+        },
+        "102": {
+            "bus_idx": 102,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697029_1549048",
+            "coordinates": "{\"coordinates\": [30.671682473605006, 36.886123000000005], \"type\": \"Point\"}"
+        },
+        "103": {
+            "bus_idx": 103,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697032_1549001",
+            "coordinates": "{\"coordinates\": [30.665951473605006, 36.886882], \"type\": \"Point\"}"
+        },
+        "104": {
+            "bus_idx": 104,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697037_1548945",
+            "coordinates": "{\"coordinates\": [30.67843747360501, 36.89319699999999], \"type\": \"Point\"}"
+        },
+        "105": {
+            "bus_idx": 105,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697039_1549041",
+            "coordinates": "{\"coordinates\": [30.677966473605007, 36.88984499999999], \"type\": \"Point\"}"
+        },
+        "106": {
+            "bus_idx": 106,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697042_1548980",
+            "coordinates": "{\"coordinates\": [30.66939847360501, 36.90131000000001], \"type\": \"Point\"}"
+        },
+        "107": {
+            "bus_idx": 107,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697045_1549214",
+            "coordinates": "{\"coordinates\": [30.66815047360501, 36.88723399999999], \"type\": \"Point\"}"
+        },
+        "108": {
+            "bus_idx": 108,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697052",
+            "coordinates": "{\"coordinates\": [30.66304547360501, 36.878906999999984], \"type\": \"Point\"}"
+        },
+        "109": {
+            "bus_idx": 109,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697053_1549047",
+            "coordinates": "{\"coordinates\": [30.670519473605008, 36.88507099999998], \"type\": \"Point\"}"
+        },
+        "110": {
+            "bus_idx": 110,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697054_1549283",
+            "coordinates": "{\"coordinates\": [30.68502347360501, 36.894134], \"type\": \"Point\"}"
+        },
+        "111": {
+            "bus_idx": 111,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697055_1549289",
+            "coordinates": "{\"coordinates\": [30.668147473605014, 36.89920799999999], \"type\": \"Point\"}"
+        },
+        "112": {
+            "bus_idx": 112,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697065_1548981",
+            "coordinates": "{\"coordinates\": [30.66932947360501, 36.90015300000001], \"type\": \"Point\"}"
+        },
+        "113": {
+            "bus_idx": 113,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697066_1549305",
+            "coordinates": "{\"coordinates\": [30.67045847360501, 36.902337999999986], \"type\": \"Point\"}"
+        },
+        "114": {
+            "bus_idx": 114,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697069_1549315",
+            "coordinates": "{\"coordinates\": [30.66848647360501, 36.90016999999999], \"type\": \"Point\"}"
+        },
+        "115": {
+            "bus_idx": 115,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697162",
+            "coordinates": "{\"coordinates\": [30.67482647360501, 36.886109000000005], \"type\": \"Point\"}"
+        },
+        "116": {
+            "bus_idx": 116,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697165",
+            "coordinates": "{\"coordinates\": [30.665041473605008, 36.88444799999999], \"type\": \"Point\"}"
+        },
+        "117": {
+            "bus_idx": 117,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697171_1549287",
+            "coordinates": "{\"coordinates\": [30.67680047360501, 36.890087], \"type\": \"Point\"}"
+        },
+        "118": {
+            "bus_idx": 118,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697175_1549248",
+            "coordinates": "{\"coordinates\": [30.666731473605005, 36.89452], \"type\": \"Point\"}"
+        },
+        "119": {
+            "bus_idx": 119,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697176_1548942",
+            "coordinates": "{\"coordinates\": [30.66325947360501, 36.88098999999998], \"type\": \"Point\"}"
+        },
+        "120": {
+            "bus_idx": 120,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697179_1548940",
+            "coordinates": "{\"coordinates\": [30.66935347360501, 36.88219299999999], \"type\": \"Point\"}"
+        },
+        "121": {
+            "bus_idx": 121,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697216_7796779",
+            "coordinates": "{\"coordinates\": [30.685722473605008, 36.88868699999999], \"type\": \"Point\"}"
+        },
+        "122": {
+            "bus_idx": 122,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697221",
+            "coordinates": "{\"coordinates\": [30.679082473605007, 36.890213999999986], \"type\": \"Point\"}"
+        },
+        "123": {
+            "bus_idx": 123,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_697273",
+            "coordinates": "{\"coordinates\": [30.66764947360501, 36.896135], \"type\": \"Point\"}"
+        },
+        "124": {
+            "bus_idx": 124,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_794270_1548933",
+            "coordinates": "{\"coordinates\": [30.680940473605006, 36.906264], \"type\": \"Point\"}"
+        },
+        "125": {
+            "bus_idx": 125,
+            "voltage_level_kv": 31.5,
+            "bus_name": "SB_TS_694008_1549255",
+            "coordinates": "{\"coordinates\": [30.679801473605014, 36.88777], \"type\": \"Point\"}"
+        }
+    },
+    "load_data": {
+        "0": {
+            "load_idx": 0,
+            "bus_idx": 7,
+            "s_rated_mva": 0.0020000000949949026
+        },
+        "1": {
+            "load_idx": 1,
+            "bus_idx": 8,
+            "s_rated_mva": 0.32015621373337877
+        },
+        "2": {
+            "load_idx": 2,
+            "bus_idx": 9,
+            "s_rated_mva": 0.07224956438834962
+        },
+        "3": {
+            "load_idx": 3,
+            "bus_idx": 10,
+            "s_rated_mva": 0.39231111211259295
+        },
+        "4": {
+            "load_idx": 4,
+            "bus_idx": 11,
+            "s_rated_mva": 1.0935465826982327
+        },
+        "5": {
+            "load_idx": 5,
+            "bus_idx": 12,
+            "s_rated_mva": 0.8703769444897677
+        },
+        "6": {
+            "load_idx": 6,
+            "bus_idx": 13,
+            "s_rated_mva": 0.5269725079884571
+        },
+        "7": {
+            "load_idx": 7,
+            "bus_idx": 14,
+            "s_rated_mva": 0.9399957596915309
+        },
+        "8": {
+            "load_idx": 8,
+            "bus_idx": 15,
+            "s_rated_mva": 0.8253774667506873
+        },
+        "9": {
+            "load_idx": 9,
+            "bus_idx": 16,
+            "s_rated_mva": 0.6862885843926151
+        },
+        "10": {
+            "load_idx": 10,
+            "bus_idx": 17,
+            "s_rated_mva": 0.12362847696473445
+        },
+        "11": {
+            "load_idx": 11,
+            "bus_idx": 18,
+            "s_rated_mva": 0.34221046918674086
+        },
+        "12": {
+            "load_idx": 12,
+            "bus_idx": 19,
+            "s_rated_mva": 0.39632309839936286
+        },
+        "13": {
+            "load_idx": 13,
+            "bus_idx": 20,
+            "s_rated_mva": 0.825324205413049
+        },
+        "14": {
+            "load_idx": 14,
+            "bus_idx": 21,
+            "s_rated_mva": 0.3617347064499315
+        },
+        "15": {
+            "load_idx": 15,
+            "bus_idx": 22,
+            "s_rated_mva": 0.6502584045282066
+        },
+        "16": {
+            "load_idx": 16,
+            "bus_idx": 23,
+            "s_rated_mva": 0.328000009059906
+        },
+        "17": {
+            "load_idx": 17,
+            "bus_idx": 24,
+            "s_rated_mva": 0.8022568207070734
+        },
+        "18": {
+            "load_idx": 18,
+            "bus_idx": 25,
+            "s_rated_mva": 1.4730024044477894
+        },
+        "19": {
+            "load_idx": 19,
+            "bus_idx": 26,
+            "s_rated_mva": 1.0906218321435606
+        },
+        "20": {
+            "load_idx": 20,
+            "bus_idx": 27,
+            "s_rated_mva": 0.674305551733739
+        },
+        "21": {
+            "load_idx": 21,
+            "bus_idx": 28,
+            "s_rated_mva": 0.5532449508023749
+        },
+        "22": {
+            "load_idx": 22,
+            "bus_idx": 29,
+            "s_rated_mva": 1.026124797265016
+        },
+        "23": {
+            "load_idx": 23,
+            "bus_idx": 30,
+            "s_rated_mva": 1.2320551453062574
+        },
+        "24": {
+            "load_idx": 24,
+            "bus_idx": 31,
+            "s_rated_mva": 1.0208428469387176
+        },
+        "25": {
+            "load_idx": 25,
+            "bus_idx": 32,
+            "s_rated_mva": 0.9234717269208684
+        },
+        "26": {
+            "load_idx": 26,
+            "bus_idx": 33,
+            "s_rated_mva": 0.5810129101307029
+        },
+        "27": {
+            "load_idx": 27,
+            "bus_idx": 34,
+            "s_rated_mva": 0.3270351713383779
+        },
+        "28": {
+            "load_idx": 28,
+            "bus_idx": 35,
+            "s_rated_mva": 0.7178244779020057
+        },
+        "29": {
+            "load_idx": 29,
+            "bus_idx": 36,
+            "s_rated_mva": 0.4161249856752615
+        },
+        "30": {
+            "load_idx": 30,
+            "bus_idx": 37,
+            "s_rated_mva": 0.47745994832497324
+        },
+        "31": {
+            "load_idx": 31,
+            "bus_idx": 38,
+            "s_rated_mva": 0.5551684627917138
+        },
+        "32": {
+            "load_idx": 32,
+            "bus_idx": 39,
+            "s_rated_mva": 0.6715296061492715
+        },
+        "33": {
+            "load_idx": 33,
+            "bus_idx": 40,
+            "s_rated_mva": 1.1745637315179267
+        },
+        "34": {
+            "load_idx": 34,
+            "bus_idx": 41,
+            "s_rated_mva": 0.6243396303704566
+        },
+        "35": {
+            "load_idx": 35,
+            "bus_idx": 42,
+            "s_rated_mva": 0.8181198062935867
+        },
+        "36": {
+            "load_idx": 36,
+            "bus_idx": 43,
+            "s_rated_mva": 0.17229045433907925
+        },
+        "37": {
+            "load_idx": 37,
+            "bus_idx": 44,
+            "s_rated_mva": 0.2781725975541065
+        },
+        "38": {
+            "load_idx": 38,
+            "bus_idx": 45,
+            "s_rated_mva": 0.1436941214533723
+        },
+        "39": {
+            "load_idx": 39,
+            "bus_idx": 46,
+            "s_rated_mva": 0.5240343390532181
+        },
+        "40": {
+            "load_idx": 40,
+            "bus_idx": 47,
+            "s_rated_mva": 0.9649890975026205
+        },
+        "41": {
+            "load_idx": 41,
+            "bus_idx": 48,
+            "s_rated_mva": 0.32555797954283655
+        },
+        "42": {
+            "load_idx": 42,
+            "bus_idx": 49,
+            "s_rated_mva": 1.4883722329365086
+        },
+        "43": {
+            "load_idx": 43,
+            "bus_idx": 50,
+            "s_rated_mva": 0.3753451833148955
+        },
+        "44": {
+            "load_idx": 44,
+            "bus_idx": 51,
+            "s_rated_mva": 1.0215537761050857
+        },
+        "45": {
+            "load_idx": 45,
+            "bus_idx": 52,
+            "s_rated_mva": 0.5685701213380172
+        },
+        "46": {
+            "load_idx": 46,
+            "bus_idx": 53,
+            "s_rated_mva": 0.5996165341305868
+        },
+        "47": {
+            "load_idx": 47,
+            "bus_idx": 54,
+            "s_rated_mva": 0.2778488730959156
+        },
+        "48": {
+            "load_idx": 48,
+            "bus_idx": 55,
+            "s_rated_mva": 0.3480804363548495
+        },
+        "49": {
+            "load_idx": 49,
+            "bus_idx": 56,
+            "s_rated_mva": 0.5105487074196703
+        },
+        "50": {
+            "load_idx": 50,
+            "bus_idx": 57,
+            "s_rated_mva": 1.3301729226238692
+        },
+        "51": {
+            "load_idx": 51,
+            "bus_idx": 58,
+            "s_rated_mva": 0.5532630594501041
+        },
+        "52": {
+            "load_idx": 52,
+            "bus_idx": 59,
+            "s_rated_mva": 0.8005622807637285
+        },
+        "53": {
+            "load_idx": 53,
+            "bus_idx": 60,
+            "s_rated_mva": 0.39468974140539603
+        },
+        "54": {
+            "load_idx": 54,
+            "bus_idx": 61,
+            "s_rated_mva": 0.7975587706226439
+        },
+        "55": {
+            "load_idx": 55,
+            "bus_idx": 62,
+            "s_rated_mva": 0.5341610296726601
+        },
+        "56": {
+            "load_idx": 56,
+            "bus_idx": 63,
+            "s_rated_mva": 0.1463420628833885
+        },
+        "57": {
+            "load_idx": 57,
+            "bus_idx": 64,
+            "s_rated_mva": 0.6649661571237548
+        },
+        "58": {
+            "load_idx": 58,
+            "bus_idx": 65,
+            "s_rated_mva": 0.5961006446466649
+        },
+        "59": {
+            "load_idx": 59,
+            "bus_idx": 66,
+            "s_rated_mva": 0.6133057850052502
+        },
+        "60": {
+            "load_idx": 60,
+            "bus_idx": 67,
+            "s_rated_mva": 1.1407506673017969
+        },
+        "61": {
+            "load_idx": 61,
+            "bus_idx": 68,
+            "s_rated_mva": 0.1781796877017155
+        },
+        "62": {
+            "load_idx": 62,
+            "bus_idx": 69,
+            "s_rated_mva": 0.8067936552569891
+        },
+        "63": {
+            "load_idx": 63,
+            "bus_idx": 70,
+            "s_rated_mva": 0.6279140196788318
+        },
+        "64": {
+            "load_idx": 64,
+            "bus_idx": 71,
+            "s_rated_mva": 0.24583734723953546
+        },
+        "65": {
+            "load_idx": 65,
+            "bus_idx": 72,
+            "s_rated_mva": 0.13693794957813635
+        },
+        "66": {
+            "load_idx": 66,
+            "bus_idx": 73,
+            "s_rated_mva": 0.1853105504993222
+        },
+        "67": {
+            "load_idx": 67,
+            "bus_idx": 74,
+            "s_rated_mva": 0.4652956132597873
+        },
+        "68": {
+            "load_idx": 68,
+            "bus_idx": 75,
+            "s_rated_mva": 0.4088275844439916
+        },
+        "69": {
+            "load_idx": 69,
+            "bus_idx": 76,
+            "s_rated_mva": 0.8461701693815188
+        },
+        "70": {
+            "load_idx": 70,
+            "bus_idx": 77,
+            "s_rated_mva": 0.6211730802293787
+        },
+        "71": {
+            "load_idx": 71,
+            "bus_idx": 78,
+            "s_rated_mva": 0.2985632260868538
+        },
+        "72": {
+            "load_idx": 72,
+            "bus_idx": 79,
+            "s_rated_mva": 0.932939447898362
+        },
+        "73": {
+            "load_idx": 73,
+            "bus_idx": 80,
+            "s_rated_mva": 1.6467981169830175
+        },
+        "74": {
+            "load_idx": 74,
+            "bus_idx": 81,
+            "s_rated_mva": 0.2840000092983246
+        },
+        "75": {
+            "load_idx": 75,
+            "bus_idx": 82,
+            "s_rated_mva": 0.6526775641333005
+        },
+        "76": {
+            "load_idx": 76,
+            "bus_idx": 83,
+            "s_rated_mva": 0.2746415990860052
+        },
+        "77": {
+            "load_idx": 77,
+            "bus_idx": 84,
+            "s_rated_mva": 1.2626955044704213
+        },
+        "78": {
+            "load_idx": 78,
+            "bus_idx": 85,
+            "s_rated_mva": 0.9031168272077624
+        },
+        "79": {
+            "load_idx": 79,
+            "bus_idx": 86,
+            "s_rated_mva": 0.7509594036055796
+        },
+        "80": {
+            "load_idx": 80,
+            "bus_idx": 87,
+            "s_rated_mva": 0.6629057508369737
+        },
+        "81": {
+            "load_idx": 81,
+            "bus_idx": 88,
+            "s_rated_mva": 0.9959799464475779
+        },
+        "82": {
+            "load_idx": 82,
+            "bus_idx": 89,
+            "s_rated_mva": 0.15062536510486596
+        },
+        "83": {
+            "load_idx": 83,
+            "bus_idx": 90,
+            "s_rated_mva": 0.10720074514180776
+        },
+        "84": {
+            "load_idx": 84,
+            "bus_idx": 91,
+            "s_rated_mva": 0.9267793603055837
+        },
+        "85": {
+            "load_idx": 85,
+            "bus_idx": 92,
+            "s_rated_mva": 1.6007810593582121
+        },
+        "86": {
+            "load_idx": 86,
+            "bus_idx": 93,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "87": {
+            "load_idx": 87,
+            "bus_idx": 94,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "88": {
+            "load_idx": 88,
+            "bus_idx": 95,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "89": {
+            "load_idx": 89,
+            "bus_idx": 95,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "90": {
+            "load_idx": 90,
+            "bus_idx": 96,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "91": {
+            "load_idx": 91,
+            "bus_idx": 96,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "92": {
+            "load_idx": 92,
+            "bus_idx": 97,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "93": {
+            "load_idx": 93,
+            "bus_idx": 97,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "94": {
+            "load_idx": 94,
+            "bus_idx": 97,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "95": {
+            "load_idx": 95,
+            "bus_idx": 98,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "96": {
+            "load_idx": 96,
+            "bus_idx": 99,
+            "s_rated_mva": 0.8067936552569891
+        },
+        "97": {
+            "load_idx": 97,
+            "bus_idx": 100,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "98": {
+            "load_idx": 98,
+            "bus_idx": 101,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "99": {
+            "load_idx": 99,
+            "bus_idx": 102,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "100": {
+            "load_idx": 100,
+            "bus_idx": 103,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "101": {
+            "load_idx": 101,
+            "bus_idx": 104,
+            "s_rated_mva": 1.0244998783616033
+        },
+        "102": {
+            "load_idx": 102,
+            "bus_idx": 105,
+            "s_rated_mva": 1.6007810593582121
+        },
+        "103": {
+            "load_idx": 103,
+            "bus_idx": 106,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "104": {
+            "load_idx": 104,
+            "bus_idx": 107,
+            "s_rated_mva": 1.280624854933515
+        },
+        "105": {
+            "load_idx": 105,
+            "bus_idx": 108,
+            "s_rated_mva": 3.2015621187164243
+        },
+        "106": {
+            "load_idx": 106,
+            "bus_idx": 108,
+            "s_rated_mva": 3.2015621187164243
+        },
+        "107": {
+            "load_idx": 107,
+            "bus_idx": 109,
+            "s_rated_mva": 1.280624854933515
+        },
+        "108": {
+            "load_idx": 108,
+            "bus_idx": 110,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "109": {
+            "load_idx": 109,
+            "bus_idx": 111,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "110": {
+            "load_idx": 110,
+            "bus_idx": 112,
+            "s_rated_mva": 1.280624854933515
+        },
+        "111": {
+            "load_idx": 111,
+            "bus_idx": 113,
+            "s_rated_mva": 1.280624854933515
+        },
+        "112": {
+            "load_idx": 112,
+            "bus_idx": 114,
+            "s_rated_mva": 1.6007810593582121
+        },
+        "113": {
+            "load_idx": 113,
+            "bus_idx": 115,
+            "s_rated_mva": 3.2015621187164243
+        },
+        "114": {
+            "load_idx": 114,
+            "bus_idx": 115,
+            "s_rated_mva": 0.0640312423976002
+        },
+        "115": {
+            "load_idx": 115,
+            "bus_idx": 116,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "116": {
+            "load_idx": 116,
+            "bus_idx": 116,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "117": {
+            "load_idx": 117,
+            "bus_idx": 117,
+            "s_rated_mva": 1.280624854933515
+        },
+        "118": {
+            "load_idx": 118,
+            "bus_idx": 118,
+            "s_rated_mva": 0.8067936552569891
+        },
+        "119": {
+            "load_idx": 119,
+            "bus_idx": 119,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "120": {
+            "load_idx": 120,
+            "bus_idx": 120,
+            "s_rated_mva": 1.6007810593582121
+        },
+        "121": {
+            "load_idx": 121,
+            "bus_idx": 121,
+            "s_rated_mva": 0.5122499391808016
+        },
+        "122": {
+            "load_idx": 122,
+            "bus_idx": 122,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "123": {
+            "load_idx": 123,
+            "bus_idx": 122,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "124": {
+            "load_idx": 124,
+            "bus_idx": 122,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "125": {
+            "load_idx": 125,
+            "bus_idx": 122,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "126": {
+            "load_idx": 126,
+            "bus_idx": 122,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "127": {
+            "load_idx": 127,
+            "bus_idx": 123,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "128": {
+            "load_idx": 128,
+            "bus_idx": 123,
+            "s_rated_mva": 2.0489997567232066
+        },
+        "129": {
+            "load_idx": 129,
+            "bus_idx": 124,
+            "s_rated_mva": 0.2980067192020956
+        },
+        "130": {
+            "load_idx": 130,
+            "bus_idx": 125,
+            "s_rated_mva": 0.45454151947600047
+        }
+    },
+    "static_generation": {},
+    "generator_data": {},
+    "shunt_data": {
+        "0": {
+            "shunt_idx": 0,
+            "bus_idx": 0,
+            "p_mw": 0.0,
+            "q_mvar": -1.0
+        },
+        "1": {
+            "shunt_idx": 1,
+            "bus_idx": 0,
+            "p_mw": 0.0,
+            "q_mvar": -1.0
+        }
+    },
+    "battery_data": {},
+    "line_data": {
+        "0": {
+            "line_idx": 0,
+            "from_bus_idx": 2,
+            "to_bus_idx": 0,
+            "closed": true,
+            "r_ohm": 0.2932509779930115,
+            "x_ohm": 0.6536890268325806,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "1": {
+            "line_idx": 1,
+            "from_bus_idx": 7,
+            "to_bus_idx": 0,
+            "closed": true,
+            "r_ohm": 0.3841569721698761,
+            "x_ohm": 0.5567147135734558,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "2": {
+            "line_idx": 2,
+            "from_bus_idx": 7,
+            "to_bus_idx": 0,
+            "closed": true,
+            "r_ohm": 0.38425740599632263,
+            "x_ohm": 0.5568602681159973,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "3": {
+            "line_idx": 3,
+            "from_bus_idx": 0,
+            "to_bus_idx": 1,
+            "closed": true,
+            "r_ohm": 0.22322699427604675,
+            "x_ohm": 0.4975978136062622,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "4": {
+            "line_idx": 4,
+            "from_bus_idx": 0,
+            "to_bus_idx": 9,
+            "closed": true,
+            "r_ohm": 0.2949685752391815,
+            "x_ohm": 0.6575177907943726,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "5": {
+            "line_idx": 5,
+            "from_bus_idx": 2,
+            "to_bus_idx": 0,
+            "closed": true,
+            "r_ohm": 0.29366791248321533,
+            "x_ohm": 0.654618501663208,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "7": {
+            "line_idx": 7,
+            "from_bus_idx": 56,
+            "to_bus_idx": 55,
+            "closed": true,
+            "r_ohm": 0.206869438290596,
+            "x_ohm": 0.08088359981775284,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 159.9999964237213
+        },
+        "8": {
+            "line_idx": 8,
+            "from_bus_idx": 44,
+            "to_bus_idx": 43,
+            "closed": true,
+            "r_ohm": 0.01336540374904871,
+            "x_ohm": 0.029792973771691322,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "9": {
+            "line_idx": 9,
+            "from_bus_idx": 9,
+            "to_bus_idx": 107,
+            "closed": true,
+            "r_ohm": 0.174001082777977,
+            "x_ohm": 0.17248916625976562,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "10": {
+            "line_idx": 10,
+            "from_bus_idx": 47,
+            "to_bus_idx": 42,
+            "closed": true,
+            "r_ohm": 0.05189577117562294,
+            "x_ohm": 0.05144483968615532,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "11": {
+            "line_idx": 11,
+            "from_bus_idx": 116,
+            "to_bus_idx": 9,
+            "closed": true,
+            "r_ohm": 0.06012759730219841,
+            "x_ohm": 0.08713604509830475,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "12": {
+            "line_idx": 12,
+            "from_bus_idx": 78,
+            "to_bus_idx": 79,
+            "closed": true,
+            "r_ohm": 0.03911827504634857,
+            "x_ohm": 0.08719898760318756,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "14": {
+            "line_idx": 14,
+            "from_bus_idx": 104,
+            "to_bus_idx": 45,
+            "closed": true,
+            "r_ohm": 0.1057918444275856,
+            "x_ohm": 0.15331201255321503,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "15": {
+            "line_idx": 15,
+            "from_bus_idx": 84,
+            "to_bus_idx": 67,
+            "closed": true,
+            "r_ohm": 0.07640870660543442,
+            "x_ohm": 0.07574477791786194,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "17": {
+            "line_idx": 17,
+            "from_bus_idx": 60,
+            "to_bus_idx": 36,
+            "closed": true,
+            "r_ohm": 0.052660051733255386,
+            "x_ohm": 0.052202481776475906,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "18": {
+            "line_idx": 18,
+            "from_bus_idx": 34,
+            "to_bus_idx": 13,
+            "closed": true,
+            "r_ohm": 0.030918600037693977,
+            "x_ohm": 0.0306499432772398,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "19": {
+            "line_idx": 19,
+            "from_bus_idx": 58,
+            "to_bus_idx": 7,
+            "closed": true,
+            "r_ohm": 0.11653533577919006,
+            "x_ohm": 0.11552274227142334,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "20": {
+            "line_idx": 20,
+            "from_bus_idx": 20,
+            "to_bus_idx": 7,
+            "closed": true,
+            "r_ohm": 0.07967232912778854,
+            "x_ohm": 0.07898004353046417,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "21": {
+            "line_idx": 21,
+            "from_bus_idx": 80,
+            "to_bus_idx": 51,
+            "closed": true,
+            "r_ohm": 0.0442134365439415,
+            "x_ohm": 0.06407347321510315,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "22": {
+            "line_idx": 22,
+            "from_bus_idx": 80,
+            "to_bus_idx": 15,
+            "closed": true,
+            "r_ohm": 0.016923531889915466,
+            "x_ohm": 0.037724435329437256,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "23": {
+            "line_idx": 23,
+            "from_bus_idx": 69,
+            "to_bus_idx": 7,
+            "closed": true,
+            "r_ohm": 0.040089961141347885,
+            "x_ohm": 0.03974161297082901,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "24": {
+            "line_idx": 24,
+            "from_bus_idx": 3,
+            "to_bus_idx": 45,
+            "closed": true,
+            "r_ohm": 0.03684411942958832,
+            "x_ohm": 0.05339396372437477,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "25": {
+            "line_idx": 25,
+            "from_bus_idx": 19,
+            "to_bus_idx": 50,
+            "closed": true,
+            "r_ohm": 0.039103731513023376,
+            "x_ohm": 0.038763951510190964,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "26": {
+            "line_idx": 26,
+            "from_bus_idx": 37,
+            "to_bus_idx": 33,
+            "closed": true,
+            "r_ohm": 0.0424889512360096,
+            "x_ohm": 0.04211975634098053,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "27": {
+            "line_idx": 27,
+            "from_bus_idx": 37,
+            "to_bus_idx": 65,
+            "closed": true,
+            "r_ohm": 0.08707499504089355,
+            "x_ohm": 0.046935223042964935,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 250.99998712539673
+        },
+        "29": {
+            "line_idx": 29,
+            "from_bus_idx": 47,
+            "to_bus_idx": 101,
+            "closed": true,
+            "r_ohm": 0.056393641978502274,
+            "x_ohm": 0.030397338792681694,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 250.99998712539673
+        },
+        "30": {
+            "line_idx": 30,
+            "from_bus_idx": 26,
+            "to_bus_idx": 58,
+            "closed": true,
+            "r_ohm": 0.08662804961204529,
+            "x_ohm": 0.08587532490491867,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "31": {
+            "line_idx": 31,
+            "from_bus_idx": 125,
+            "to_bus_idx": 40,
+            "closed": true,
+            "r_ohm": 0.07751265913248062,
+            "x_ohm": 0.0768391415476799,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "32": {
+            "line_idx": 32,
+            "from_bus_idx": 38,
+            "to_bus_idx": 53,
+            "closed": true,
+            "r_ohm": 0.021527640521526337,
+            "x_ohm": 0.031197544187307358,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "33": {
+            "line_idx": 33,
+            "from_bus_idx": 38,
+            "to_bus_idx": 39,
+            "closed": true,
+            "r_ohm": 0.03721233084797859,
+            "x_ohm": 0.03688898682594299,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "34": {
+            "line_idx": 34,
+            "from_bus_idx": 89,
+            "to_bus_idx": 50,
+            "closed": true,
+            "r_ohm": 0.04149693250656128,
+            "x_ohm": 0.04113635793328285,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "35": {
+            "line_idx": 35,
+            "from_bus_idx": 3,
+            "to_bus_idx": 96,
+            "closed": true,
+            "r_ohm": 0.04915710166096687,
+            "x_ohm": 0.04872996732592583,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "36": {
+            "line_idx": 36,
+            "from_bus_idx": 51,
+            "to_bus_idx": 37,
+            "closed": true,
+            "r_ohm": 0.017067544162273407,
+            "x_ohm": 0.038045454770326614,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "37": {
+            "line_idx": 37,
+            "from_bus_idx": 29,
+            "to_bus_idx": 77,
+            "closed": true,
+            "r_ohm": 0.06614109873771667,
+            "x_ohm": 0.06556639075279236,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "38": {
+            "line_idx": 38,
+            "from_bus_idx": 71,
+            "to_bus_idx": 78,
+            "closed": true,
+            "r_ohm": 0.03805574029684067,
+            "x_ohm": 0.037725068628787994,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "39": {
+            "line_idx": 39,
+            "from_bus_idx": 81,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.014684904366731644,
+            "x_ohm": 0.03273428604006767,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "40": {
+            "line_idx": 40,
+            "from_bus_idx": 72,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.03308703005313873,
+            "x_ohm": 0.07375466823577881,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "41": {
+            "line_idx": 41,
+            "from_bus_idx": 43,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.019082985818386078,
+            "x_ohm": 0.042538098990917206,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "42": {
+            "line_idx": 42,
+            "from_bus_idx": 48,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.01992746628820896,
+            "x_ohm": 0.04442054033279419,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "43": {
+            "line_idx": 43,
+            "from_bus_idx": 16,
+            "to_bus_idx": 35,
+            "closed": true,
+            "r_ohm": 0.12274027615785599,
+            "x_ohm": 0.12167377024888992,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "44": {
+            "line_idx": 44,
+            "from_bus_idx": 111,
+            "to_bus_idx": 35,
+            "closed": true,
+            "r_ohm": 0.03164814040064812,
+            "x_ohm": 0.031373146921396255,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "45": {
+            "line_idx": 45,
+            "from_bus_idx": 125,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.0838930606842041,
+            "x_ohm": 0.18700696527957916,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "46": {
+            "line_idx": 46,
+            "from_bus_idx": 50,
+            "to_bus_idx": 118,
+            "closed": true,
+            "r_ohm": 0.07114607840776443,
+            "x_ohm": 0.0383492074906826,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 250.99998712539673
+        },
+        "47": {
+            "line_idx": 47,
+            "from_bus_idx": 66,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.016301479190587997,
+            "x_ohm": 0.03633781149983406,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "48": {
+            "line_idx": 48,
+            "from_bus_idx": 18,
+            "to_bus_idx": 19,
+            "closed": true,
+            "r_ohm": 0.04583556950092316,
+            "x_ohm": 0.045437298715114594,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "49": {
+            "line_idx": 49,
+            "from_bus_idx": 62,
+            "to_bus_idx": 10,
+            "closed": true,
+            "r_ohm": 0.12455254793167114,
+            "x_ohm": 0.12347029149532318,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "50": {
+            "line_idx": 50,
+            "from_bus_idx": 76,
+            "to_bus_idx": 77,
+            "closed": true,
+            "r_ohm": 0.032176196575164795,
+            "x_ohm": 0.07172432541847229,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "51": {
+            "line_idx": 51,
+            "from_bus_idx": 72,
+            "to_bus_idx": 68,
+            "closed": true,
+            "r_ohm": 0.04847581312060356,
+            "x_ohm": 0.04805459827184677,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "52": {
+            "line_idx": 52,
+            "from_bus_idx": 7,
+            "to_bus_idx": 88,
+            "closed": true,
+            "r_ohm": 0.180756077170372,
+            "x_ohm": 0.17918546497821808,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "53": {
+            "line_idx": 53,
+            "from_bus_idx": 7,
+            "to_bus_idx": 49,
+            "closed": true,
+            "r_ohm": 0.13782323896884918,
+            "x_ohm": 0.13662566244602203,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "54": {
+            "line_idx": 54,
+            "from_bus_idx": 64,
+            "to_bus_idx": 28,
+            "closed": true,
+            "r_ohm": 0.02276019938290119,
+            "x_ohm": 0.03298375383019447,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "55": {
+            "line_idx": 55,
+            "from_bus_idx": 44,
+            "to_bus_idx": 45,
+            "closed": true,
+            "r_ohm": 0.0400698222219944,
+            "x_ohm": 0.0893200933933258,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "56": {
+            "line_idx": 56,
+            "from_bus_idx": 117,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.06082163751125336,
+            "x_ohm": 0.10720319300889969,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 503.00002098083496
+        },
+        "57": {
+            "line_idx": 57,
+            "from_bus_idx": 65,
+            "to_bus_idx": 54,
+            "closed": true,
+            "r_ohm": 0.011647319421172142,
+            "x_ohm": 0.0168791264295578,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "58": {
+            "line_idx": 58,
+            "from_bus_idx": 20,
+            "to_bus_idx": 21,
+            "closed": true,
+            "r_ohm": 0.05798492208123207,
+            "x_ohm": 0.057481084018945694,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "59": {
+            "line_idx": 59,
+            "from_bus_idx": 30,
+            "to_bus_idx": 7,
+            "closed": true,
+            "r_ohm": 0.14251120388507843,
+            "x_ohm": 0.1412729024887085,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "60": {
+            "line_idx": 60,
+            "from_bus_idx": 14,
+            "to_bus_idx": 7,
+            "closed": true,
+            "r_ohm": 0.16624055802822113,
+            "x_ohm": 0.16479606926441193,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "61": {
+            "line_idx": 61,
+            "from_bus_idx": 27,
+            "to_bus_idx": 28,
+            "closed": true,
+            "r_ohm": 0.08108702301979065,
+            "x_ohm": 0.08038244396448135,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "62": {
+            "line_idx": 62,
+            "from_bus_idx": 73,
+            "to_bus_idx": 74,
+            "closed": true,
+            "r_ohm": 0.018454659730196,
+            "x_ohm": 0.018294304609298706,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "63": {
+            "line_idx": 63,
+            "from_bus_idx": 68,
+            "to_bus_idx": 73,
+            "closed": true,
+            "r_ohm": 0.04462932050228119,
+            "x_ohm": 0.0442415289580822,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "64": {
+            "line_idx": 64,
+            "from_bus_idx": 74,
+            "to_bus_idx": 25,
+            "closed": true,
+            "r_ohm": 0.05923363193869591,
+            "x_ohm": 0.05871894210577011,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "65": {
+            "line_idx": 65,
+            "from_bus_idx": 15,
+            "to_bus_idx": 79,
+            "closed": true,
+            "r_ohm": 0.0197548009455204,
+            "x_ohm": 0.0440356470644474,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "67": {
+            "line_idx": 67,
+            "from_bus_idx": 117,
+            "to_bus_idx": 105,
+            "closed": true,
+            "r_ohm": 0.05933216214179993,
+            "x_ohm": 0.10457786917686462,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 503.00002098083496
+        },
+        "68": {
+            "line_idx": 68,
+            "from_bus_idx": 85,
+            "to_bus_idx": 16,
+            "closed": true,
+            "r_ohm": 0.096996009349823,
+            "x_ohm": 0.09615319222211838,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "69": {
+            "line_idx": 69,
+            "from_bus_idx": 85,
+            "to_bus_idx": 69,
+            "closed": true,
+            "r_ohm": 0.07101435214281082,
+            "x_ohm": 0.07039729505777359,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "70": {
+            "line_idx": 70,
+            "from_bus_idx": 111,
+            "to_bus_idx": 112,
+            "closed": true,
+            "r_ohm": 0.041377268731594086,
+            "x_ohm": 0.04101773723959923,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "71": {
+            "line_idx": 71,
+            "from_bus_idx": 114,
+            "to_bus_idx": 112,
+            "closed": true,
+            "r_ohm": 0.016740821301937103,
+            "x_ohm": 0.01659535802900791,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "72": {
+            "line_idx": 72,
+            "from_bus_idx": 75,
+            "to_bus_idx": 76,
+            "closed": true,
+            "r_ohm": 0.01737065240740776,
+            "x_ohm": 0.03872111812233925,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "73": {
+            "line_idx": 73,
+            "from_bus_idx": 33,
+            "to_bus_idx": 84,
+            "closed": true,
+            "r_ohm": 0.010819580405950546,
+            "x_ohm": 0.010725567117333412,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "75": {
+            "line_idx": 75,
+            "from_bus_idx": 83,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.005218434147536755,
+            "x_ohm": 0.011632470414042473,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "76": {
+            "line_idx": 76,
+            "from_bus_idx": 71,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.047088053077459335,
+            "x_ohm": 0.10496451705694199,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "77": {
+            "line_idx": 77,
+            "from_bus_idx": 37,
+            "to_bus_idx": 110,
+            "closed": true,
+            "r_ohm": 0.06440795958042145,
+            "x_ohm": 0.06384830921888351,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "78": {
+            "line_idx": 78,
+            "from_bus_idx": 40,
+            "to_bus_idx": 61,
+            "closed": true,
+            "r_ohm": 0.05190927907824516,
+            "x_ohm": 0.05145823210477829,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "80": {
+            "line_idx": 80,
+            "from_bus_idx": 87,
+            "to_bus_idx": 30,
+            "closed": true,
+            "r_ohm": 0.08009885996580124,
+            "x_ohm": 0.0794028714299202,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "81": {
+            "line_idx": 81,
+            "from_bus_idx": 113,
+            "to_bus_idx": 16,
+            "closed": true,
+            "r_ohm": 0.012245850637555122,
+            "x_ohm": 0.01213944423943758,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "82": {
+            "line_idx": 82,
+            "from_bus_idx": 55,
+            "to_bus_idx": 35,
+            "closed": true,
+            "r_ohm": 0.03458855673670769,
+            "x_ohm": 0.05012523755431175,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "83": {
+            "line_idx": 83,
+            "from_bus_idx": 17,
+            "to_bus_idx": 35,
+            "closed": true,
+            "r_ohm": 0.0592278391122818,
+            "x_ohm": 0.05871320143342018,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "84": {
+            "line_idx": 84,
+            "from_bus_idx": 32,
+            "to_bus_idx": 67,
+            "closed": true,
+            "r_ohm": 0.057386621832847595,
+            "x_ohm": 0.05688798055052757,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "85": {
+            "line_idx": 85,
+            "from_bus_idx": 17,
+            "to_bus_idx": 62,
+            "closed": true,
+            "r_ohm": 0.03334074839949608,
+            "x_ohm": 0.03305104747414589,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "86": {
+            "line_idx": 86,
+            "from_bus_idx": 57,
+            "to_bus_idx": 88,
+            "closed": true,
+            "r_ohm": 0.050384581089019775,
+            "x_ohm": 0.04994678124785423,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "87": {
+            "line_idx": 87,
+            "from_bus_idx": 7,
+            "to_bus_idx": 98,
+            "closed": true,
+            "r_ohm": 0.026234731078147888,
+            "x_ohm": 0.014141062274575233,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 250.99998712539673
+        },
+        "88": {
+            "line_idx": 88,
+            "from_bus_idx": 82,
+            "to_bus_idx": 90,
+            "closed": true,
+            "r_ohm": 0.023461081087589264,
+            "x_ohm": 0.023257223889231682,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "89": {
+            "line_idx": 89,
+            "from_bus_idx": 90,
+            "to_bus_idx": 89,
+            "closed": true,
+            "r_ohm": 0.03490791097283363,
+            "x_ohm": 0.03460459038615227,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "90": {
+            "line_idx": 90,
+            "from_bus_idx": 31,
+            "to_bus_idx": 11,
+            "closed": true,
+            "r_ohm": 0.06875432282686234,
+            "x_ohm": 0.0681569054722786,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "91": {
+            "line_idx": 91,
+            "from_bus_idx": 25,
+            "to_bus_idx": 24,
+            "closed": true,
+            "r_ohm": 0.07252553850412369,
+            "x_ohm": 0.07189535349607468,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "92": {
+            "line_idx": 92,
+            "from_bus_idx": 32,
+            "to_bus_idx": 31,
+            "closed": true,
+            "r_ohm": 0.04583556950092316,
+            "x_ohm": 0.045437298715114594,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "93": {
+            "line_idx": 93,
+            "from_bus_idx": 22,
+            "to_bus_idx": 23,
+            "closed": true,
+            "r_ohm": 0.0840592235326767,
+            "x_ohm": 0.08332881331443787,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "94": {
+            "line_idx": 94,
+            "from_bus_idx": 23,
+            "to_bus_idx": 24,
+            "closed": true,
+            "r_ohm": 0.051849450916051865,
+            "x_ohm": 0.05139892175793648,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "95": {
+            "line_idx": 95,
+            "from_bus_idx": 27,
+            "to_bus_idx": 26,
+            "closed": true,
+            "r_ohm": 0.028334328904747963,
+            "x_ohm": 0.028088128194212914,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "96": {
+            "line_idx": 96,
+            "from_bus_idx": 48,
+            "to_bus_idx": 63,
+            "closed": true,
+            "r_ohm": 0.007938112132251263,
+            "x_ohm": 0.017694935202598572,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "97": {
+            "line_idx": 97,
+            "from_bus_idx": 63,
+            "to_bus_idx": 82,
+            "closed": true,
+            "r_ohm": 0.03005010075867176,
+            "x_ohm": 0.029788989573717117,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "98": {
+            "line_idx": 98,
+            "from_bus_idx": 10,
+            "to_bus_idx": 18,
+            "closed": true,
+            "r_ohm": 0.017163490876555443,
+            "x_ohm": 0.017014354467391968,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "99": {
+            "line_idx": 99,
+            "from_bus_idx": 49,
+            "to_bus_idx": 12,
+            "closed": true,
+            "r_ohm": 0.07403480261564255,
+            "x_ohm": 0.07339150458574295,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "101": {
+            "line_idx": 101,
+            "from_bus_idx": 11,
+            "to_bus_idx": 87,
+            "closed": true,
+            "r_ohm": 0.028318891301751137,
+            "x_ohm": 0.028072824701666832,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "102": {
+            "line_idx": 102,
+            "from_bus_idx": 36,
+            "to_bus_idx": 52,
+            "closed": true,
+            "r_ohm": 0.055093780159950256,
+            "x_ohm": 0.05461506173014641,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "103": {
+            "line_idx": 103,
+            "from_bus_idx": 52,
+            "to_bus_idx": 14,
+            "closed": true,
+            "r_ohm": 0.03436557948589325,
+            "x_ohm": 0.03406697139143944,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "104": {
+            "line_idx": 104,
+            "from_bus_idx": 66,
+            "to_bus_idx": 70,
+            "closed": true,
+            "r_ohm": 0.01639648526906967,
+            "x_ohm": 0.03654959052801132,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "105": {
+            "line_idx": 105,
+            "from_bus_idx": 13,
+            "to_bus_idx": 70,
+            "closed": true,
+            "r_ohm": 0.04218980297446251,
+            "x_ohm": 0.04182320833206177,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "106": {
+            "line_idx": 106,
+            "from_bus_idx": 81,
+            "to_bus_idx": 75,
+            "closed": true,
+            "r_ohm": 0.02685672603547573,
+            "x_ohm": 0.059866633266210556,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "107": {
+            "line_idx": 107,
+            "from_bus_idx": 116,
+            "to_bus_idx": 119,
+            "closed": true,
+            "r_ohm": 0.156353160738945,
+            "x_ohm": 0.15499457716941833,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "108": {
+            "line_idx": 108,
+            "from_bus_idx": 92,
+            "to_bus_idx": 120,
+            "closed": true,
+            "r_ohm": 0.3198282718658447,
+            "x_ohm": 0.1424369364976883,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 238.00000548362732
+        },
+        "109": {
+            "line_idx": 109,
+            "from_bus_idx": 100,
+            "to_bus_idx": 21,
+            "closed": true,
+            "r_ohm": 0.0222877599298954,
+            "x_ohm": 0.03229909762740135,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "110": {
+            "line_idx": 110,
+            "from_bus_idx": 86,
+            "to_bus_idx": 21,
+            "closed": true,
+            "r_ohm": 0.038636669516563416,
+            "x_ohm": 0.038300950080156326,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "111": {
+            "line_idx": 111,
+            "from_bus_idx": 91,
+            "to_bus_idx": 59,
+            "closed": true,
+            "r_ohm": 0.046078749001026154,
+            "x_ohm": 0.04567836597561836,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "112": {
+            "line_idx": 112,
+            "from_bus_idx": 91,
+            "to_bus_idx": 99,
+            "closed": true,
+            "r_ohm": 0.05118848755955696,
+            "x_ohm": 0.027591653168201447,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 250.99998712539673
+        },
+        "113": {
+            "line_idx": 113,
+            "from_bus_idx": 91,
+            "to_bus_idx": 28,
+            "closed": true,
+            "r_ohm": 0.07249852269887924,
+            "x_ohm": 0.07186856865882874,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "114": {
+            "line_idx": 114,
+            "from_bus_idx": 59,
+            "to_bus_idx": 29,
+            "closed": true,
+            "r_ohm": 0.04460037127137184,
+            "x_ohm": 0.04421282932162285,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "115": {
+            "line_idx": 115,
+            "from_bus_idx": 97,
+            "to_bus_idx": 1,
+            "closed": true,
+            "r_ohm": 0.039046645164489746,
+            "x_ohm": 0.08703931421041489,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "116": {
+            "line_idx": 116,
+            "from_bus_idx": 9,
+            "to_bus_idx": 1,
+            "closed": true,
+            "r_ohm": 0.0777660608291626,
+            "x_ohm": 0.17334920167922974,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "117": {
+            "line_idx": 117,
+            "from_bus_idx": 103,
+            "to_bus_idx": 47,
+            "closed": true,
+            "r_ohm": 0.0328153595328331,
+            "x_ohm": 0.04755554348230362,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "118": {
+            "line_idx": 118,
+            "from_bus_idx": 9,
+            "to_bus_idx": 47,
+            "closed": true,
+            "r_ohm": 0.16279935836791992,
+            "x_ohm": 0.16138477623462677,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "122": {
+            "line_idx": 122,
+            "from_bus_idx": 22,
+            "to_bus_idx": 86,
+            "closed": true,
+            "r_ohm": 0.03374605253338814,
+            "x_ohm": 0.033452827483415604,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "123": {
+            "line_idx": 123,
+            "from_bus_idx": 92,
+            "to_bus_idx": 119,
+            "closed": true,
+            "r_ohm": 0.048691973090171814,
+            "x_ohm": 0.0482688806951046,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "125": {
+            "line_idx": 125,
+            "from_bus_idx": 102,
+            "to_bus_idx": 109,
+            "closed": true,
+            "r_ohm": 0.06674519181251526,
+            "x_ohm": 0.06616523116827011,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "126": {
+            "line_idx": 126,
+            "from_bus_idx": 3,
+            "to_bus_idx": 115,
+            "closed": true,
+            "r_ohm": 0.0418153777718544,
+            "x_ohm": 0.041452039033174515,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "127": {
+            "line_idx": 127,
+            "from_bus_idx": 39,
+            "to_bus_idx": 61,
+            "closed": true,
+            "r_ohm": 0.04995419457554817,
+            "x_ohm": 0.049520134925842285,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "128": {
+            "line_idx": 128,
+            "from_bus_idx": 46,
+            "to_bus_idx": 9,
+            "closed": true,
+            "r_ohm": 0.10931344330310822,
+            "x_ohm": 0.15841545164585114,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 449.0000009536743
+        },
+        "129": {
+            "line_idx": 129,
+            "from_bus_idx": 34,
+            "to_bus_idx": 41,
+            "closed": true,
+            "r_ohm": 0.050807248800992966,
+            "x_ohm": 0.05036577954888344,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "130": {
+            "line_idx": 130,
+            "from_bus_idx": 42,
+            "to_bus_idx": 41,
+            "closed": true,
+            "r_ohm": 0.05237827077507973,
+            "x_ohm": 0.05192314833402634,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "132": {
+            "line_idx": 132,
+            "from_bus_idx": 107,
+            "to_bus_idx": 4,
+            "closed": true,
+            "r_ohm": 0.18257221579551697,
+            "x_ohm": 0.18098580837249756,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "134": {
+            "line_idx": 134,
+            "from_bus_idx": 7,
+            "to_bus_idx": 124,
+            "closed": true,
+            "r_ohm": 0.09808838367462158,
+            "x_ohm": 0.09723608195781708,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "135": {
+            "line_idx": 135,
+            "from_bus_idx": 9,
+            "to_bus_idx": 2,
+            "closed": true,
+            "r_ohm": 0.19713255763053894,
+            "x_ohm": 0.4394303858280182,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "137": {
+            "line_idx": 137,
+            "from_bus_idx": 46,
+            "to_bus_idx": 109,
+            "closed": true,
+            "r_ohm": 0.04220717027783394,
+            "x_ohm": 0.04184042662382126,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "139": {
+            "line_idx": 139,
+            "from_bus_idx": 108,
+            "to_bus_idx": 92,
+            "closed": true,
+            "r_ohm": 0.030252749100327492,
+            "x_ohm": 0.029989877715706825,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "140": {
+            "line_idx": 140,
+            "from_bus_idx": 46,
+            "to_bus_idx": 3,
+            "closed": true,
+            "r_ohm": 0.10070516169071198,
+            "x_ohm": 0.08707965910434723,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 354.99998927116394
+        },
+        "141": {
+            "line_idx": 141,
+            "from_bus_idx": 2,
+            "to_bus_idx": 4,
+            "closed": true,
+            "r_ohm": 0.028548749163746834,
+            "x_ohm": 0.038099560886621475,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 460.999995470047
+        },
+        "143": {
+            "line_idx": 143,
+            "from_bus_idx": 6,
+            "to_bus_idx": 8,
+            "closed": true,
+            "r_ohm": 7.54000066081062e-05,
+            "x_ohm": 0.00016807499923743308,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "144": {
+            "line_idx": 144,
+            "from_bus_idx": 9,
+            "to_bus_idx": 5,
+            "closed": true,
+            "r_ohm": 0.010048558004200459,
+            "x_ohm": 0.022399354726076126,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "145": {
+            "line_idx": 145,
+            "from_bus_idx": 5,
+            "to_bus_idx": 9,
+            "closed": true,
+            "r_ohm": 0.010423296131193638,
+            "x_ohm": 0.023234685882925987,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "147": {
+            "line_idx": 147,
+            "from_bus_idx": 93,
+            "to_bus_idx": 92,
+            "closed": true,
+            "r_ohm": 0.2518411874771118,
+            "x_ohm": 0.21776683628559113,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 354.99998927116394
+        },
+        "148": {
+            "line_idx": 148,
+            "from_bus_idx": 125,
+            "to_bus_idx": 93,
+            "closed": true,
+            "r_ohm": 0.22087524831295013,
+            "x_ohm": 0.19099061191082,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 354.99998927116394
+        },
+        "149": {
+            "line_idx": 149,
+            "from_bus_idx": 38,
+            "to_bus_idx": 121,
+            "closed": true,
+            "r_ohm": 0.05056407302618027,
+            "x_ohm": 0.05012471228837967,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "150": {
+            "line_idx": 150,
+            "from_bus_idx": 105,
+            "to_bus_idx": 122,
+            "closed": true,
+            "r_ohm": 0.02913527935743332,
+            "x_ohm": 0.028882119804620743,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "156": {
+            "line_idx": 156,
+            "from_bus_idx": 95,
+            "to_bus_idx": 4,
+            "closed": true,
+            "r_ohm": 0.05667059123516083,
+            "x_ohm": 0.056178171187639236,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 363.0000054836273
+        },
+        "157": {
+            "line_idx": 157,
+            "from_bus_idx": 123,
+            "to_bus_idx": 97,
+            "closed": true,
+            "r_ohm": 0.012487748637795448,
+            "x_ohm": 0.027836579829454422,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "158": {
+            "line_idx": 158,
+            "from_bus_idx": 94,
+            "to_bus_idx": 31,
+            "closed": true,
+            "r_ohm": 0.06400419771671295,
+            "x_ohm": 0.055344369262456894,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 354.99998927116394
+        },
+        "159": {
+            "line_idx": 159,
+            "from_bus_idx": 6,
+            "to_bus_idx": 1,
+            "closed": true,
+            "r_ohm": 0.0012079080333933234,
+            "x_ohm": 0.00269256136380136,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 575.9999752044678
+        },
+        "160": {
+            "line_idx": 160,
+            "from_bus_idx": 114,
+            "to_bus_idx": 106,
+            "closed": true,
+            "r_ohm": 0.12618397176265717,
+            "x_ohm": 0.06351570785045624,
+            "b_total_mho": 0.0,
+            "current_capacity_ampere": 159.9999964237213
+        }
+    },
+    "transformer_data": {},
+    "sop_data": {}
+}
